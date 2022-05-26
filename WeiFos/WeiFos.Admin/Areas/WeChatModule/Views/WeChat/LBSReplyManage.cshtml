@@ -1,0 +1,95 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>LBS回复</title> 
+    <link href="@(ViewBag.Res)Content/Resources/Style/opa-icons.css" rel="stylesheet" />
+    <script src="@(ViewBag.Res)js/bootstrap.min.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/plugins/yw-jq-plugin/pager/pager-1.1.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/plugins/template/template.m.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/Admin/WeChat/TextReplyManage.js?@AppGlobal.VNo"></script>
+</head>
+<body>
+    <div class="box-title">
+        <h3><i class="icon-align-justify mt2"></i>LBS回复 <small>管理公众号LBS信息</small></h3>
+    </div>
+    <div class="box">
+        <ul class="clearfix shopSearch">
+            <li>
+                <input type="text" placeholder="关键词" class="input_serch" id="KeyWordName" maxlength="50" name="KeyWordName" />
+                <select id="type" class="input-small">
+                    <option value="0">名称</option>
+                    <option value="1">地点</option>
+                </select>
+                <input type="button" class="btn btn-primary btn_search" id="search_btn" value="搜索" name="search_btn" />
+            </li>
+        </ul>
+
+        <div class="m_opBar">
+            <a href="LBSReplyForm">
+                <i class="icon-plus mt_1"></i>新增地理位置
+            </a>
+            <span id="operation_span" style="display:none;">
+            </span>
+        </div>
+        <table id="listTable" class="table  table-bordered">
+            <thead>
+                <tr role="row">
+                    <th style="width: 10px;" colspan="1" rowspan="1" class="sorting">
+                        <input type="checkbox" onclick="checkall(this)" title="全选" id="CheckAll">
+                    </th>
+                    <th colspan="1" rowspan="1" class="sorting">名称</th>
+                    <th colspan="1" rowspan="1" class="sorting">电话</th>
+                    <th colspan="1" rowspan="1" class="sorting">经度</th>
+                    <th colspan="1" rowspan="1" class="sorting">纬度</th>
+                    <th colspan="1" rowspan="1" class="sorting">地点</th>
+                    <th colspan="1" rowspan="1" class="sorting">开启</th>
+                    <th colspan="1" rowspan="1" class="align_left">操作</th>
+                </tr>
+            </thead>
+
+            <tbody role="alert" aria-live="polite" aria-relevant="all" id="data_tbody" class="tb_am">
+                <script type="text/html" id="template">
+                    {{each data as obj i}}
+                    <tr>
+                        <td>
+                            <input name="tb_checkbox" type="checkbox" value="{{obj.id}}" title="{{obj.name}}" />
+                        </td>
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.tel}} </td>
+                        <td>{{obj.lat}} </td>
+                        <td>{{obj.lng}} </td>
+                        <td>{{obj.lbsaddress}} </td>
+                        <td>
+                            {{if obj.is_enable == "True"}}
+                            <span class='label label-success'>是</span>
+                            {{else}}
+                            <span class='label label-warning'>否</span>
+                            {{/if}}
+                        </td>
+                        <td class="align_left" data-id="{{=obj.id}}">
+                            <a href="javascript:;" name="edit_btn" class="nl" title="编辑">
+                                <i class="icon-edit"></i>编辑
+                            </a>
+                            <a href="javascript:;" name="delete_btn" class="nl" title="删除">
+                                <i class="icon-remove"></i>删除
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </script>
+            </tbody>
+        </table>
+
+        <div id="PagerDiv"></div>
+    </div>
+</body>
+</html>

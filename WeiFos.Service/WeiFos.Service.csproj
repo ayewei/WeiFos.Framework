@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="aliyun-net-sdk-core" Version="1.5.1" />
+    <PackageReference Include="Unity" Version="5.8.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeiFos.CodeBuilder\WeiFos.CodeBuilder.csproj" />
+    <ProjectReference Include="..\WeiFos.Core\WeiFos.Core.csproj" />
+    <ProjectReference Include="..\WeiFos.Entity\WeiFos.Entity.csproj" />
+    <ProjectReference Include="..\WeiFos.ORM\WeiFos.ORM.csproj" />
+    <ProjectReference Include="..\WeiFos.SDK\WeiFos.SDK.csproj" />
+    <ProjectReference Include="..\WeiFos.WeChat\WeiFos.WeChat.csproj" />
+  </ItemGroup>
+
+</Project>

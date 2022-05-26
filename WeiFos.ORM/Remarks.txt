@@ -1,0 +1,7 @@
+﻿
+--------------------------数据库操作包------------------------------
+
+PM>  Install-Package System.Data.Common
+PM>  Install-Package System.Data.SqlClient
+
+Nu Get 搜索 Data.Mysql

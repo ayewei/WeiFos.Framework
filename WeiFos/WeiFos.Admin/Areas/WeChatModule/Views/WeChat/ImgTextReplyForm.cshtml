@@ -1,0 +1,179 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/upload/jquery.form.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/upload/jquery.uploadimg-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)Content/Ueditor/ueditor.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)Content/Ueditor/ueditor.all.min.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/WeChat/ImgTextReplyForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)WeChatModule/WeChat/ImgTextReplyManage">图文信息管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")图文信息</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <ul id="Tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#base_panel" data-toggle="tab">基本信息</a>
+            </li>
+            <li>
+                <a href="#details_panel" data-toggle="tab">图文详细</a>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+            @*基本信息*@
+            <div id="base_panel" class="tab-pane active">
+                <div class="controls box">
+                    <table class="table_s1 mt20">
+                        <tbody>
+                            <tr>
+                                <th scope="row" style="width:120px;">关键词：</th>
+                                <td>
+                                    <input type="text" id="keywords" value="@ViewBag.keywords" class="form-control form-control-sm chosen-select w178" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">封面标题：</th>
+                                <td>
+                                    <input type="text" data-val="title" id="title" maxlength="50" class="form-control form-control-sm chosen-select w178" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">封面简介：</th>
+                                <td>
+                                    <textarea style="width:400px;" id="introduction" data-val="introduction" cols="20" rows="3" name="introduction" class="form-control form-control-sm chosen-select"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">封面图片：</th>
+                                <td>
+                                    <div id="imgtext_reply_img">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">多图文：</th>
+                                <td>
+                                    <div id="more_div">
+                                        @foreach (ImgTextReply it in ViewBag.moreImgTextReplys)
+                                        {
+                                            <div class="moreimgtext_d" data-id="@it.id" name="more_imgtexts">
+                                                <a class="btn-mini del btn_del" href="javascript:;">
+                                                    <i class="fa fa-remove"></i>
+                                                </a>
+                                                @it.title
+                                            </div>
+                                        }
+                                    </div>
+                                    <input type="button" id="moreImgText" value="添 加" class="more_btn" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">推荐阅读：</th>
+                                <td>
+                                    <div id="rec_div">
+                                        @foreach (ImgTextReply it in ViewBag.recImgTextReplys)
+                                        {
+                                            <div class="moreimgtext_d" data-id="@it.id" name="rec_div">
+                                                <a class="btn-mini del btn_del" href="javascript:;">
+                                                    <i class="fa fa-remove"></i>
+                                                </a>
+                                                @it.title
+                                            </div>
+                                        }
+                                    </div>
+                                    <input type="button" id="moreRec" value="添 加" class="more_btn">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">详细页显示图文封面：</th>
+                                <td>
+                                    <input type="radio" checked="checked" value="show_titleimg" name="titleimg_g" id="show_titleimg">是&nbsp;&nbsp;
+                                    <input type="radio" value="_show_titleimg" name="titleimg_g" id="_show_titleimg">否
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">图文消息类型：</th>
+                                <td>
+                                    <select data-val="content_type" id="content_type" class="form-control form-control-sm chosen-select w148">
+                                        @foreach (var item in ViewBag.imgTextTypes)
+                                        {
+                                            <option value="@item.Key">@item.Value</option>
+                                        }
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr name="imgtexttr" style="display: none;" id="@MsgContentType.OutLink">
+                                <th scope="row" style="width:120px;">外部连接：</th>
+                                <td>
+                                    <input type="text" style="width:400px;" id="OutLinkTxt" maxlength="300" value="@ViewBag.outlink" class="form-control form-control-sm chosen-select" />
+                                </td>
+                            </tr>
+                            <tr name="imgtexttr" style="display: none;" id="@MsgContentType.Navigation">
+                                <th scope="row" style="width:120px;">导航信息</th>
+                                <td>
+                                    <input type="text" style="width:300px;" id="address_text" value="@ViewBag.address_text" name="address_text" />
+                                    <input type="button" onclick="fun_geocoder_getPoint()" id="searchmap" value="搜 索" class="btn btn-small btn-primary btn-save" />
+                                    <div style="width: 520px; height: 340px; border: 1px solid #CCCCCC; margin-top: 10px;" id="container"></div>
+                                    <input type="hidden" value="@ViewBag.lat_lng" id="lat_lng" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <script type="text/html" id="template">
+                        {{each data as obj i}}
+                        <tr>
+                            <td><input name="checkboxs" type="checkbox" value="{{obj.id}}" title="{{obj.title}}" /> </td>
+                            <td>{{obj.keywords}} </td>
+                            <td>{{obj.title}} </td>
+                            <td>{{obj.created_date}} </td>
+                        </tr>
+                        {{/each}}
+                    </script>
+                </div>
+            </div>
+
+            @*详细信息*@
+            <div id="details_panel" class="tab-pane">
+                <textarea id="details" data-val="details" rows="2" cols="20"></textarea>
+            </div>
+        </div>
+
+        <div class="form-actions mb60">
+            <input type="hidden" id="defurl" value="@ViewBag.defurl" />
+            <input type="hidden" id="imgurl" value="@ViewBag.imgurl" />
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="hidden" id="Ticket" value="@ViewBag.Ticket" />
+            <input type="hidden" id="imgmsg" value="@ViewBag.imgmsg" />
+             
+            <input type="hidden" id="Ticket" value="@ViewBag.Ticket" />
+            <input type="hidden" id="DetailsTicket" value="@ViewBag.DetailsTicket" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>

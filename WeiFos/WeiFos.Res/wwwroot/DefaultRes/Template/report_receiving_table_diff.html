@@ -1,0 +1,48 @@
+﻿<table class="report" cellpadding="0" cellspacing="0">
+    <tr>
+        <th style="text-align:center;font-size:24px;line-height:40px;" colspan="4">
+            <div>{store_name}</div>
+            <div>收货差异单</div>
+        </th>
+    </tr>
+    <tr>
+        <td style="width:80px;text-align:right;">供&nbsp;&nbsp;应&nbsp;&nbsp;商：</td>
+        <td style="width:400px;text-align:left;">{sup_name}</td>
+        <td style="width:120px;text-align:right;">到货单号： </td>
+        <td style="text-align:left;">{aog_no}</td>
+    </tr>
+    <tr>
+        <td style="width:80px;text-align:right;">收货单号：</td>
+        <td style="text-align:left;">{rec_no}</td>
+        <td style="width:120px;text-align:right;">差异单号： </td>
+        <td style="text-align:left;">{diff_no}</td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <table class="report-table" cellpadding="0" cellspacing="0" border="1" style="border:solid 1px black;border-collapse:collapse;margin-top:10px;">
+                <tr>
+                    <th style="width:38px;text-align:center;">序号</th>
+                    <th style="width:138px; text-align: center;">书号</th>
+                    <th style="text-align:center;">书名</th>
+                    <th style="width:60px;text-align:center;">定价</th>
+                    <th style="width:60px;text-align:center;">进价</th>
+                    <th style="width:80px;text-align:center;">差异数量</th>
+                    <th style="width:80px;text-align:center;">差异码洋</th>
+                    <th style="width:80px;text-align:center;">差异实洋</th>
+                </tr>
+                {datarows}
+                <tr>
+                    <td colspan="5" style="text-align:center;">差异合计：</td>
+                    <td style="text-align:right;">{diff_count}</td>
+                    <td style="text-align: right;">{diff_unit_price}</td>
+                    <td style="text-align: right;">{diff_cost_price}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <span class="report-fl">备注：此差错请于三日内核实，否则将以本单作结算！</span>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/System/SysMenuManage.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5" >
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body">
+                <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="dataTables_length">
+                                <div class="input-group input-group-sm" style="width:220px;">
+                                    <input type="text" name="menu_name" class="form-control float-right" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-default" name="search_btn"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="dataTables_filter">
+                                <div class="btn-group btn-group-sm">
+                                    <a name="refresh_btn" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                                </div>
+                                <div class="btn-group btn-group-sm" >
+                                    <a name="add_btn" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                                    <a name="edit_btn" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>
+                                    <a name="enable_btn" class="btn btn-default"><i class="fa fa-unlock"></i>&nbsp;启用</a>
+                                    <a name="disable_btn" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;禁用</a>
+                                    <a name="delete_btn" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt6">
+                            <div class="m_opBar">
+                                <a id="close_all" href="javascript:;" style="color:#000"><i class="fa fa-plus-square-o"></i>收起全部</a>
+                                <a id="open_all" href="javascript:;" style="color:#000"><i class="fa fa-minus-square-o"></i>展开全部</a>
+                            </div>
+                            <div name="datagrid" class="mb60"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="template">
+        {{each data as obj i}}
+        <tr pid="tr_{{obj.parent_id}}" id="tr_{{obj.id}}" data-id="{{obj.id}}">
+            <td>
+                <a class="f_item_{{getTrIndex(obj.parent_id)}}" href="javascript:;">
+                    {{if obj.parent_id == 0}}
+                    <i class="fa fa-minus-square-o"></i>
+                    {{/if}}
+                    {{obj.name}}
+                </a>
+            </td>
+            <td>{{obj.serial_no}}</td>
+            <td>{{obj.action_url}}</td>
+            <td><input type="text" style="width:80px;" value="{{obj.order_index}}" maxlength="8" class="i_width"></td>
+            <td> 
+                {{if obj.is_enable }}
+                <i class="fa fa-toggle-on"></i>
+                {{else}}
+                <i class="fa fa-toggle-off"></i>
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+</div>

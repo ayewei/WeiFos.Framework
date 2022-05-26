@@ -1,0 +1,249 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link href="@(AppGlobal.Res)js/plugins/chosen_v1.8.7/chosen.css?@AppGlobal.VNo" rel="stylesheet" />
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/chosen_v1.8.7/chosen.jquery.min.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/Ueditor/ueditor.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/Ueditor/ueditor.all.min.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/skuengine/skuengine-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/city-area/area-1.0.js?@(AppGlobal.VNo)"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Product/ProductForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6" >
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)ProductModule/Product/ProductManage">商品管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")商品信息</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <ul id="Tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#base_panel" data-toggle="tab">基本信息</a>
+            </li>
+            <li>
+                <a href="#details_panel" data-toggle="tab">详细信息</a>
+            </li>
+            <li>
+                <a href="#img_panel" data-toggle="tab">商品图片</a>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+            @*商品基本信息*@
+            <div id="base_panel" class="tab-pane active">
+                <div class="controls box">
+                    <div class="m_pBase">
+                        <table class="table_s1 mt20" id="product_tb">
+                            <tr>
+                                <th scope="row">所属商品类别：</th>
+                                <td>
+                                    @if (ViewBag.ProductCgty != null)
+                                    {
+                                        @ViewBag.ProductCgty.name <span>&nbsp;</span>
+                                    }
+                                    @Html.Raw("[ <a id='selectCgty' href='javascript:void(0);' class='link_blue'>编辑</a> ]")
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">类型：</th>
+                                <td>
+                                    <select id="product_type_id" data-val="product_type_id" class="form-control form-control-sm chosen-select w148">
+                                        @foreach (ProductType pc in ViewBag.ProductTypes)
+                                        {
+                                            <option value="@pc.id">@pc.name</option>
+                                        }
+                                    </select>
+
+                                    <select id="brand_id" data-val="brand_id" class="form-control form-control-sm chosen-select w148">
+                                        @foreach (ProductBrand pc in ViewBag.Brands)
+                                        {
+                                            <option value="@pc.id">@pc.name</option>
+                                        }
+                                    </select>
+
+                                    <select id="guide_catg_id" data-val="guide_catg_id" class="form-control form-control-sm chosen-select w148">
+                                        @foreach (GuideProductCatg pc in ViewBag.GuideProductCatgs)
+                                        {
+                                            <option value="@pc.id">@pc.name</option>
+                                        }
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">相关设置：</th>
+                                <td>
+                                    <input id="is_shelves" data-val="is_shelves" type="checkbox" checked="checked" />是否上架&nbsp;&nbsp;&nbsp;
+                                    <input name="tag" type="checkbox" checked="checked" />新品&nbsp;&nbsp;&nbsp;
+                                    <input name="tag" type="checkbox" checked="checked" />热门&nbsp;&nbsp;&nbsp;
+                                    <input name="tag" type="checkbox" checked="checked" />推荐&nbsp;&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">商品名称：</th>
+                                <td>
+                                    <input id="name" data-val="name" type="text" maxlength="100" class="form-control form-control-sm" style="width:400px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">商品编号：</th>
+                                <td>
+                                    <input id="no" data-val="no" type="text" maxlength="50" value="@ViewBag.No" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">计量单位：</th>
+                                <td>
+                                    <input id="unit" data-val="unit" type="text" maxlength="30" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">排序：</th>
+                                <td>
+                                    <input id="order_index" data-val="order_index" type="text" maxlength="9" value="10000" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr name="attrval_tr">
+                                <th scope="row">成本价：</th>
+                                <td>
+                                    <input id="cost_price" data-val="cost_price" data-nosku="cost_price" type="text" maxlength="8" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">销售价：</th>
+                                <td>
+                                    <input id="sale_price" data-val="sale_price" data-nosku="sale_price" type="text" maxlength="8" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">市场价：</th>
+                                <td>
+                                    <input id="market_price" data-val="market_price" data-nosku="market_price" type="text" maxlength="8" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr name="attrval_tr">
+                                <th scope="row">商品重量：</th>
+                                <td>
+                                    <input id="weight" data-nosku="weight" type="text" maxlength="10" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr name="attrval_tr">
+                                <th scope="row">商品库存：</th>
+                                <td>
+                                    <input id="stock" data-nosku="stock" type="text" maxlength="9" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr name="attrval_tr">
+                                <th scope="row">预警库存：</th>
+                                <td>
+                                    <input id="warning_stock" data-nosku="warning_stock" type="text" maxlength="9" class="form-control form-control-sm" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">商品简介：</th>
+                                <td>
+                                    <textarea id="introduction" data-val="introduction" rows="3" cols="30" style="width:500px;" class="form-control form-control-sm"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    @*基础属性*@
+                    <div class="m_pAttr mt20" id="div_baseattr" style="display:none;">
+                        <h5>基础属性</h5>
+                        <table id="tbd_baseattr" style="width: 100%;" border="0" cellpadding="0" cellspacing="0" class="table_s1"></table>
+                    </div>
+
+                    @*扩展属性*@
+                    <div class="m_pAttr mt20" id="div_extattr" style="display:none;">
+                        <h5>扩展属性</h5>
+                        <table class="table_s1" style="width:100%;">
+                            <tr>
+                                <th>当前属性：</th>
+                                <td>
+                                    <ul class="clearfix list_pattr" id="ext_attr_ul"></ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    @*商品SKU*@
+                    <div class="m_pFormat mt20" id="sku_module_div">
+                    </div>
+
+                </div>
+            </div>
+
+            @*商品详细信息*@
+            <div id="details_panel" class="tab-pane">
+                <textarea id="details" data-val="details" rows="2" cols="20"></textarea>
+            </div>
+
+            @*商品图片信息*@
+            <div id="img_panel" class="tab-pane">
+                <script type="text/html" id="imgTemplate">
+                    <textarea id="myEditorImage" style="display: none;"></textarea>
+
+                    {{if imgs.length != 0}}
+                    <div class="proImgList">
+                        <ul class="clearfix disBlock">
+                            {{each imgs as obj i}}
+                            <li class="">
+                                <span class="{{obj.is_main?"icon_front":""}}"></span>
+                                <div class="opBar"><a class="btn_front disBlock" href="#"></a><a class="btn_delPic disBlock" href="#"></a></div>
+                                <div class="picBar">
+                                    <img width="150" data-id="{{obj.file_name == null ? obj.id : obj.file_name }}" src="{{ obj.is_webimg ?obj.webimg_url:(obj.domain_name + obj.visit_path + obj.file_name + obj.extend_name) }}">
+                                </div>
+                            </li>
+                            {{/each}}
+                            <li>
+                                <input type="button" onclick="upImage()" class="btn_addImg disBlock">
+                            </li>
+                        </ul>
+                    </div>
+                    {{/if}}
+
+                    {{if imgs.length == 0}}
+                    <div class="uploadProImg">
+                        <input type="button" onclick="upImage()" class="btn_uploadImg" />
+                        <input id="imgList" type="hidden" />
+                        <p>
+                            点击按钮选择图片
+                            <br />
+                            （按住Ctrl键，可选择多张图片）
+                        </p>
+                    </div>
+                    {{/if}}
+                </script>
+            </div>
+        </div>
+
+        <div class="form-actions mb60">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="hidden" id="imgmsg" value="@ViewBag.imgmsg" />
+            <input type="hidden" id="CoverTicket" value="@ViewBag.CoverTicket" />
+            <input type="hidden" id="DetailsTicket" value="@ViewBag.DetailsTicket" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>

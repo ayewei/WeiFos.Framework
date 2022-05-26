@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/System/SysPermissionForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)SystemModule/System/SysPermissionManage">系统权限</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")系统权限</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <table class="table_s1 mt30">
+            <tr>
+                <th scope="row">所属上级：</th>
+                <td>
+                    <select id="parent_id" data-val="parent_id"  class="form-control form-control-sm w178" >
+                        @foreach (SysPermission m in ViewBag.module)
+                        {
+                            <option value="@m.id" data-no="@m.code">@m.name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">权限名称：</th>
+                <td>
+                    <input type="text" maxlength="10" data-val="name" class="form-control form-control-sm"  />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">权限编号：</th>
+                <td>
+                    <input type="text" maxlength="20" id="code" data-val="code" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">请求地址：</th>
+                <td>
+                    <input type="text" maxlength="200" data-val="action_url" style="width:400px;" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">权限说明：</th>
+                <td>
+                    <textarea  rows="3" cols="20" data-val="remarks" style="width:400px;" class="form-control form-control-sm" ></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">排序索引：</th>
+                <td>
+                    <input type="text" maxlength="5" data-val="order_index" class="form-control form-control-sm" />
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-actions">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,162 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/CodeBuild/ProjectSettingForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)CodeBuildModule/CodeBuild/ProjectSettingManage">项目配置</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")项目配置</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <ul id="Tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#project_panel" data-toggle="tab">项目信息</a>
+            </li>
+            <li>
+                <a href="#project_module_panel" data-toggle="tab">项目模块</a>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+            <div id="project_panel" class="tab-pane active">
+                <table class="table_s1 mt30">
+                    <tr>
+                        <th scope="row">数据库：</th>
+                        <td>
+                            <select data-val="link_id" class="form-control form-control-sm w178">
+                                @foreach (var m in ViewBag.links)
+                                {
+                                    <option value="@m.id">@m.name</option>
+                                }
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">项目名称：</th>
+                        <td>
+                            <input type="text" maxlength="50" data-val="name" class="form-control form-control-sm" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">英文名称：</th>
+                        <td>
+                            <input type="text" maxlength="50" data-val="en_name" class="form-control form-control-sm" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="form-actions">
+                    <input type="hidden" id="entity" value="@ViewBag.entity" />
+                    <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+                    <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+                    <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+                </div>
+            </div>
+
+            <div id="project_module_panel" class="tab-pane">
+                <div class="tab-pane">
+
+                    <div class="row pd5">
+                        <div class="col-12">
+                            <div class="card-body">
+                                <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="dataTables_length">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" id="keyword" class="form-control float-right form-control-sm" placeholder="Search" />
+                                                    <div class="input-group-append">
+                                                        <button type="button" class="btn btn-default" name="search_btn"><i class="fa fa-search"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="dataTables_filter">
+                                                <div class="btn-group btn-group-sm" style="display: inline-block;">
+                                                    <a name="add_btn" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                                                    <a name="edit_btn" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>
+                                                    <a name="delete_btn" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 mt6">
+                                            <div name="datagrid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*列表模板*@
+    <script type="text/html" id="template" >
+        {{each data as obj i}}
+        <tr data-id="{{obj.id}}">
+            <td>
+                {{obj.name}}
+            </td>
+            <td>
+                {{obj.en_name }}
+            </td>
+            <td class="align_left" data-id="{{obj.id}}">
+                {{if obj.created_date == "" }}
+                 --
+                {{else}}
+                {{obj.created_date | ChangeCompleteDateFormat}}
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+
+    @*编辑模板*@
+    <script type="text/html" id="form_template" >
+        {{each data as obj i}}
+        <table class="table_s1"> 
+            <tr>
+                <th scope="row">模块名称：</th>
+                <td>
+                    <input type="text" maxlength="50" id="module_name" data-val-c="name" class="form-control form-control-sm" value="{{obj.name}}" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">英文名称：</th>
+                <td>
+                    <input type="text" maxlength="50" id="module_en_name" data-val-c="en_name" class="form-control form-control-sm" value="{{obj.en_name}}" />
+                </td>
+            </tr>
+        </table>
+        {{/each}}
+    </script>
+
+</div>
+
+
+

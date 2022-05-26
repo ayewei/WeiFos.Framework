@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link href="@(AppGlobal.Res)css/Admin/opa-icons.css?@AppGlobal.VNo" rel="stylesheet" />
+    <link href="@(AppGlobal.Res)css/Admin/style-app.css?@AppGlobal.VNo" rel="stylesheet" />
+    @*<link href="@(AppGlobal.Res)css/Admin/vendor.css?@AppGlobal.VNo" rel="stylesheet" />*@
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/wechat/menu.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/WeChat/WeChatMenuForm.js?@AppGlobal.VNo"></script>
+}
+
+<style type="text/css">
+    .sv-helper { position: fixed !important; z-index: 99999; margin: 0 !important; }
+    .sv-sorting-in-progress { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    .sv-visibility-hidden { visibility: hidden !important; opacity: 0 !important; }
+    .bg-white { background-color: #fff !important; color: #595961; }
+    *:before, *:after { box-sizing: border-box; }
+    .text-info { color: #42494b; }
+    a:hover, a:focus { color: inherit; text-decoration: none; }
+    .layout-center:before, .layout-center-tip { display: inline-block; vertical-align: middle; }
+    .h-200 { height: 200px; }
+    .layout-center { text-align: center; }
+    .r-3x { border-radius: 6px; }
+    .pos-rlt { position: relative; }
+    .layout-center:before, .layout-center-tip { display: inline-block; vertical-align: middle; }
+    @@media (min-width:768px) and (max-width:991px) {
+        .hbox-auto-sm { display: block }
+        .hbox-auto-sm > .col { width: auto; height: auto; display: block }
+        .hbox-auto-sm > .col.show { display: block !important }
+    }
+    .hbox { display: table; table-layout: fixed; border-spacing: 0; width: 100% }
+    .hbox > aside, .hbox > section { display: table-cell; vertical-align: top; height: 100%; padding: 0; float: none }
+    .hbox > aside.show, .hbox > section.show, .hbox > aside.hidden-sm, .hbox > section.hidden-sm { display: table-cell !important }
+    .text-30 { font-size: 30px; }
+    .help-block { color: #9797A1; margin: 0; }
+    label { font-weight: 400; }
+</style>
+
+
+<div class="content pd5">
+    <div id="wxmenu"></div>
+    <script type="text/html" id="textimg_tmp">
+        {{each data as obj i}}
+        <tr>
+            <td><input name="keywords" type="radio" value="{{obj.id}}" title="{{obj.keywords}}" /> </td>
+            <td>{{obj.keywords}}</td>
+            <td>
+                <img class="fl m_pImg" src="{{getImgUrl(obj.imgurl)}}" />
+                <b>{{obj.title}}</b> <br />
+                {{obj.introduction}}
+            </td>
+            <td>{{obj.created_date}} </td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="text_tmp">
+        {{each data as obj i}}
+        <tr>
+            <td><input name="keywords" type="radio" value="{{obj.id}}" title="{{obj.keywords}}" /> </td>
+            <td>
+                {{obj.keywords}}
+            </td>
+            <td>{{obj.reply_contents}} </td>
+            <td>{{obj.created_date}} </td>
+        </tr>
+        {{/each}}
+    </script>
+</div> 

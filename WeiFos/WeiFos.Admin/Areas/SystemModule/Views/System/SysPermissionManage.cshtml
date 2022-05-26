@@ -1,0 +1,125 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/System/SysPermissionManage.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body">
+                <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_length">
+                                <div class="input-group input-group-sm">
+                                    @*<input type="text" id="name" class="form-control float-right form-control-sm" placeholder="Search" />
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-default" name="search_btn"><i class="fa fa-search"></i></button>
+                                        </div>*@
+                                    <p class="text-danger">管理平台所有权限,涉及系统所有权限功能谨慎操作!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_filter">
+                                <div class="btn-group btn-group-sm">
+                                    <a name="refresh_btn" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                                </div>
+                                <div class="btn-group btn-group-sm" style="display: inline-block;">
+                                    <a name="add_btn" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt6">
+                            <div name="datagrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="template">
+        {{each data.parents as obj i}}
+        <table class="table table-striped table-bordered dTable_07">
+            <thead>
+                <tr role="row">
+                    <td colspan="3" class="align_left">
+                        <ul class="list_attr">
+                            <li>
+                                <p class="disBlock ts_qx" data-id="{{obj.id}}">
+                                    <span class="disBlock">{{obj.name}}({{obj.code}})</span>
+                                    {{if VerifyPermission('XT_004_002')}}
+                                    {{/if}}
+                                    <a title="编辑" class="disBlock" href="SysPermissionForm?bid={{obj.id}}" name="update_btn"><i class="fa fa-pencil-square-o"></i></a>
+
+
+                                    {{if VerifyPermission('XT_004_003')}}
+                                    {{/if}}
+                                    <a title="删除" class="disBlock" href="javascript:;" name="delete_btn"><i class="fa fa-close mt6 fs14"></i></a>
+
+                                </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="Tbody" aria-relevant="all" aria-live="polite" role="alert">
+                {{each data.childrens as c_obj i}}
+                {{if c_obj.parent_id == obj.id }}
+                <tr>
+                    <td style="width: 20%;">
+                        <ul class="list_attr">
+                            <li>
+                                <p class="disBlock ts_qx" data-id="{{c_obj.id}}">
+                                    <span class="disBlock">{{c_obj.name}}({{c_obj.code}})</span>
+                                    {{if VerifyPermission('XT_004_002')}}
+                                    {{/if}}
+                                    <a title="编辑" class="disBlock" href="SysPermissionForm?bid={{obj.id}}" name="update_btn"><i class="fa fa-pencil-square-o"></i></a>
+
+                                    {{if VerifyPermission('XT_004_003')}}
+                                    {{/if}}
+                                    <a title="删除" class="disBlock" href="javascript:;" name="delete_btn"><i class="fa fa-close mt7"></i></a>
+                                </p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td colspan="2" class="align_left">
+                        <ul class="list_attr">
+                            {{each data.childrens as c_c i}}
+                            {{if c_c.parent_id == c_obj.id }}
+                            <li>
+                                <p class="disBlock ts_qx" data-id="{{c_c.id}}">
+                                    <span class="disBlock">{{c_c.name}}({{c_c.code}})</span>
+                                    {{if VerifyPermission('XT_004_002')}}
+                                    <a title="编辑" class="disBlock" href="SysPermissionForm?bid={{obj.id}}" name="update_btn"><i class="fa fa-pencil-square-o"></i></a>
+                                    {{/if}}
+                                    {{if VerifyPermission('XT_004_003')}}
+                                    <a title="删除" class="disBlock" href="javascript:;" name="delete_btn"><i class="fa fa-close mt7"></i></a>
+                                    {{/if}}
+                                </p>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </td>
+                </tr>
+                {{/if}}
+                {{/each}}
+            </tbody>
+        </table>
+        {{/each}}
+    </script>
+
+</div>
+
+
+

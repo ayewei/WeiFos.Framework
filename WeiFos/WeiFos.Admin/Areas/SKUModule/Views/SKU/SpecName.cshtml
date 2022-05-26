@@ -1,0 +1,105 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/SKU/SpecName.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)SKUModule/SKU/ProductTypeManage">商品类型管理</a></li>
+                        <li class="breadcrumb-item active">保存规格</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="callout callout-warning">
+        <p>商品规格，可以用来向顾客展示某类商品的销售属性，一个商品多销售属性,例如手机商品 内存: 16G 32G 64G，颜色：黑色 白色 土豪金。</p>
+    </div>
+    <div class="m_step">
+        <ul class="clearfix pd0">
+            <li><p class="disBlock"><a href="@(ViewBag.bid == null ? "javascript:;" : "/SKUModule/SKU/ProductTypeForm?bid=" + ViewBag.bid)">第一步：保存类型名称</a> </p><i class="i_s_arrow disBlock"></i></li>
+            <li><p class="disBlock"><a href="@(ViewBag.bid == null ? "javascript:;" : "/SKUModule/SKU/AttrName?bid=" + ViewBag.bid)">第二步：保存基础属性</a></p><i class="i_s_arrow disBlock"></i></li>
+            <li><p class="disBlock"><a href="@(ViewBag.bid == null ? "javascript:;" : "/SKUModule/SKU/ExtAttrName?bid=" + ViewBag.bid)">第三步：保存扩展属性</a></p><i class="i_s_arrow disBlock"></i></li>
+            <li class="current"><p class="disBlock"><a href="@(ViewBag.bid == null ? "javascript:;" : "/SKUModule/SKU/SpecName?bid=" + ViewBag.bid)">第四步：保存规格</a></p></li>
+        </ul>
+    </div>
+    <div class="controls box">
+        <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="dataTables_length">
+                        <div class="input-group input-group-sm">
+                            <input type="text" id="keyword" class="form-control float-right form-control-sm" placeholder="Search" />
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-default" name="search_btn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dataTables_filter">
+                        <div class="btn-group btn-group-sm">
+                            <a name="refresh_btn" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                        </div>
+                        <div class="btn-group btn-group-sm">
+                            <a name="add_btn" class="btn btn-default"><i class="fa fa-plus"></i> 新增</a>
+                            <a name="edit_btn" class="btn btn-default"><i class="fa fa-pencil-square-o"></i> 编辑</a>
+                            <a name="delete_btn" class="btn btn-default"><i class="fa fa-trash-o"></i> 删除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mt6">
+                    <div name="datagrid"></div>
+                </div>
+            </div>
+            <script type="text/html" id="template">
+                {{each data.result as obj i}}
+                <tr data-id="{{obj.id}}">
+                    <td>{{obj.order_index}}</td>
+                    <td>{{obj.name}}</td> 
+                    <td>
+                        <ul class="list_attr">
+                            {{each data.vals as v j}}
+                            {{if v.specname_id == obj.id }}
+                            <li data-id="{{v.id}}" data-spid="{{obj.id}}">
+                                <p class="disBlock ts_qx">
+                                    <span class="disBlock">{{v.val}}</span>
+                                    <a title="编辑" class="disBlock" href="javascript:;" name="update_btn"><i class="fa fa-pencil-square-o"></i></a>
+                                    <a title="删除" class="disBlock" href="javascript:;" name="delete_btn_n"><i class="fa fa-close mt6 fs14"></i></a>
+                                </p>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                            <li data-spid="{{obj.id}}">
+                                <p class="disBlock ts_qx">
+                                    <a title="编辑" class="disBlock" href="javascript:;" name="add_btn_n" style="padding-left:5px;padding-right:5px;"><i class="fa fa-plus"></i>添加值</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                {{/each}}
+            </script>
+        </div>
+
+        <div class="form-actions">
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="下一步" id="NextBtn" />
+        </div>
+    </div>
+</div>

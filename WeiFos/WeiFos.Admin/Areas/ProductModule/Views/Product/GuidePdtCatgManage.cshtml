@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Product/GuidePdtCatgManage.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body">
+                <div class="callout callout-warning">
+                    <p>商品导购分类主要管理平台前端分类信息展示信息</p>
+                </div>
+                <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="dataTables_length">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" id="keyword" class="form-control float-right form-control-sm" placeholder="Search" />
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-default" name="search_btn"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="dataTables_filter">
+                                <div class="btn-group btn-group-sm">
+                                    <a name="refresh_btn" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                                </div>
+                                <div class="btn-group btn-group-sm">
+                                    <a name="add_btn" class="btn btn-default"><i class="fa fa-plus"></i> 新增</a>
+                                    <a name="edit_btn" class="btn btn-default"><i class="fa fa-pencil-square-o"></i> 编辑</a>
+                                    <a name="delete_btn" class="btn btn-default"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <a name="save_orderindex" class="btn btn-default"><i class="fa fa-sort-amount-asc"></i> 保存排序</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt6">
+                            <div name="datagrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="template" >
+        {{each data as obj i}}
+        <tr pid="tr_{{obj.parent_id}}" id="tr_{{obj.id}}" data-id="{{obj.id}}">
+            <td>
+                <a class="f_item_{{getTrIndex(obj.parent_id)}}" href="javascript:;">
+                    {{if obj.parent_id == 0}}
+                    <i class="fa fa-minus-square-o"></i>
+                    {{/if}}
+                    {{obj.name}}
+                </a>
+            </td>
+            <td>
+                {{if obj.is_show}}
+                <i class="fa fa-toggle-on"></i>
+                {{else}}
+                <i class="fa fa-toggle-off"></i>
+                {{/if}}
+            </td>
+            <td><input type="text" style="width:80px;" value="{{obj.order_index}}" maxlength="8" name="order_index"></td>
+        </tr>
+        {{/each}}
+    </script>
+
+</div>
+

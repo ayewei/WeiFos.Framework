@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aliyun.OSS.SDK.NetCore" Version="2.13.0" />
+    <PackageReference Include="FluentFTP" Version="37.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\WeiFos.Core\WeiFos.Core.csproj" />
+    <ProjectReference Include="..\..\WeiFos.Entity\WeiFos.Entity.csproj" />
+    <ProjectReference Include="..\..\WeiFos.NetCore\WeiFos.NetCore.csproj" />
+    <ProjectReference Include="..\..\WeiFos.ORM\WeiFos.ORM.csproj" />
+    <ProjectReference Include="..\..\WeiFos.Service\WeiFos.Service.csproj" />
+  </ItemGroup>
+
+</Project>

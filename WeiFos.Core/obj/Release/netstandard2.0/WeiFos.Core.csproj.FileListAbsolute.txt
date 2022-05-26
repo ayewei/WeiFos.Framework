@@ -1,0 +1,7 @@
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Core\bin\Release\netstandard2.0\WeiFos.Core.deps.json
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Core\bin\Release\netstandard2.0\WeiFos.Core.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Core\bin\Release\netstandard2.0\WeiFos.Core.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Core\obj\Release\netstandard2.0\WeiFos.Core.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Core\obj\Release\netstandard2.0\WeiFos.Core.AssemblyInfo.cs
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Core\obj\Release\netstandard2.0\WeiFos.Core.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Core\obj\Release\netstandard2.0\WeiFos.Core.pdb

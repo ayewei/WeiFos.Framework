@@ -1,0 +1,529 @@
+{
+  "format": 1,
+  "restore": {
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Service\\WeiFos.Service.csproj": {}
+  },
+  "projects": {
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.CodeBuilder\\WeiFos.CodeBuilder.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.CodeBuilder\\WeiFos.CodeBuilder.csproj",
+        "projectName": "WeiFos.CodeBuilder",
+        "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.CodeBuilder\\WeiFos.CodeBuilder.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.CodeBuilder\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj",
+        "projectName": "WeiFos.Core",
+        "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[1.8.3, )"
+            },
+            "Consul": {
+              "target": "Package",
+              "version": "[1.6.10.5, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "YUICompressor.NET": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Entity\\WeiFos.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Entity\\WeiFos.Entity.csproj",
+        "projectName": "WeiFos.Entity",
+        "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Entity\\WeiFos.Entity.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj"
+              },
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\WeiFos.WeChat.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\WeiFos.WeChat.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj",
+        "projectName": "WeiFos.ORM",
+        "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Data.Common": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.SDK\\WeiFos.SDK.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.SDK\\WeiFos.SDK.csproj",
+        "projectName": "WeiFos.SDK",
+        "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.SDK\\WeiFos.SDK.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.SDK\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Service\\WeiFos.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Service\\WeiFos.Service.csproj",
+        "projectName": "WeiFos.Service",
+        "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Service\\WeiFos.Service.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.CodeBuilder\\WeiFos.CodeBuilder.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.CodeBuilder\\WeiFos.CodeBuilder.csproj"
+              },
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj"
+              },
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Entity\\WeiFos.Entity.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Entity\\WeiFos.Entity.csproj"
+              },
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.ORM\\WeiFos.ORM.csproj"
+              },
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.SDK\\WeiFos.SDK.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.SDK\\WeiFos.SDK.csproj"
+              },
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\WeiFos.WeChat.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\WeiFos.WeChat.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.8.13, )"
+            },
+            "aliyun-net-sdk-core": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\WeiFos.WeChat.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\WeiFos.WeChat.csproj",
+        "projectName": "WeiFos.WeChat",
+        "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\WeiFos.WeChat.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.WeChat\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Core\\WeiFos.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

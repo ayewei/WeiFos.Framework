@@ -1,0 +1,105 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Org/DepartmentForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)SystemModule/System/DepartmentManage">部门管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")部门</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="controls box">
+        <table class="table_s1 mt30">
+            <tr>
+                <th scope="row" style="width:120px;">所属公司：</th>
+                <td style="width:440px;">
+                    <select name="parent_id" id="parent_id" data-val="parent_id" class="form-control form-control-sm w178">
+                        @foreach (Company m in ViewBag.Parents)
+                        {
+                            <option value="@m.id">@m.name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">部门名称：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="name" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">部门编号：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="no" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">部门简称：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="for_short" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">部门性质：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="nature" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">电话：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="tel" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">传真：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="fax" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">电子邮箱：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="email" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">备注信息：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="remarks" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">所属上级：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="parent_id" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">显示排序：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="order_index" class="form-control form-control-sm" />
+                </td>
+            </tr>
+        </table>
+        <div class="form-actions">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>

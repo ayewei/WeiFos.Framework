@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link href="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.css?@AppGlobal.VNo" rel="stylesheet" />
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/moment.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.min.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Order/ProductOrderManage.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <ul id="Tabs" class="nav nav-tabs">
+        <li data-status="0" class="active">
+            <a href="@Url.Content("~/OrderModule/Order/ProductOrderManage")">全部订单</a>
+        </li>
+        <li data-status="@OrderStatus.WaitingPayment">
+            <a href="/OrderModule/Order/ProductOrderManage?status=@OrderStatus.WaitingPayment">@OrderStatus.GetValueByKey(OrderStatus.WaitingPayment)</a>
+        </li>
+        <li data-status="@OrderStatus.PaymentsMade">
+            <a href="/OrderModule/Order/ProductOrderManage?status=@OrderStatus.PaymentsMade">@OrderStatus.GetValueByKey(OrderStatus.PaymentsMade)</a>
+        </li>
+        <li data-status="@OrderStatus.Sent">
+            <a href="/OrderModule/Order/ProductOrderManage?status=@OrderStatus.Sent">@OrderStatus.GetValueByKey(OrderStatus.Sent)</a>
+        </li>
+        <li data-status="@OrderStatus.Success">
+            <a href="/OrderModule/Order/ProductOrderManage?status=@OrderStatus.Success">@OrderStatus.GetValueByKey(OrderStatus.Success)</a>
+        </li>
+        <li data-status="-1">
+            <a href="/OrderModule/Order/ProductOrderManage?status=@OrderStatus.Close">@OrderStatus.GetValueByKey(OrderStatus.Close)</a>
+        </li>
+    </ul>
+
+    <div class="row mt5">
+        <div class="col-12">
+            <div class="card-body">
+                <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="dataTables_length">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" id="keyword" class="form-control float-right form-control-sm" placeholder="订单号" />
+                                    <div class="input-group-append">
+                                        <span class="btn btn-default">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                    <span class="input-group-append">
+                                        <input type="text" class="form-control form-control-sm w178" onfocus="$(this).blur()" id="date" placeholder="上传日期" />
+                                    </span>
+                                    <div class="input-group-append">
+                                        <span class="btn btn-default" id="clear">
+                                            <i class="fa fa-trash-o"></i>
+                                        </span>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-default" name="search_btn"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="dataTables_filter">
+                                <div class="btn-group btn-group-sm">
+                                    <a name="refresh_btn" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                                </div>
+                                <div class="btn-group btn-group-sm">
+                                    <a name="view_btn" class="btn btn-default"><i class="fa fa-search"></i>&nbsp;查看详情</a>
+                                    <a name="edit_btn" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;修改金额</a>
+                                    <a name="close_btn" class="btn btn-default"><i class="fa fa-lock"></i>&nbsp;关闭订单</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt6">
+                            <div name="datagrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*数据模板*@
+    <script type="text/html" id="template">
+        {{each data as obj i}}
+        <tr>
+            <th style="background: #edf2f7" colspan="5">
+                订单编号：<span style="color:blue;">{{obj.serial_no}}</span>
+                下单时间：<span style="color:blue;">{{obj.created_date | ChangeCompleteDateFormat}}</span>
+            </th>
+        </tr>
+        <tr data-id="{{obj.id}}">
+            <td>
+                <table style="width: 100%;">
+                    {{each obj.details as detail j}}
+                    <tr>
+                        <td>
+                            <img src="{{detail.product_img_url}}" class="fl m_pImg" />
+                            {{detail.product_name}} × {{detail.count}}
+                            <p>规格:{{detail.spec_msg}}</p>
+                            <p style="color:red;">单价:{{detail.unit_price | formaToMoney}}</p>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </td>
+            <td>
+                {{if obj.delivery != null }}
+                {{obj.delivery.contact}} {{obj.delivery.mobile}}<br />
+                {{obj.delivery.province}} {{obj.delivery.city}} {{obj.delivery.area}} {{obj.delivery.address}}
+                {{/if}}
+
+                <p>
+                    备注:
+                    {{if obj.remarks == "" || obj.remarks == null}}
+                    --
+                    {{else}}
+                    {{obj.remarks}}
+                    {{/if}}
+                </p>
+            </td>
+            <td><span style="color: red;">￥{{obj.actual_amount | formaToMoney}}</span></td>
+            <td data-id="{{obj.id}}">
+                {{if obj.is_cod}}
+                <p style="color:red;">货到付款</p>
+                {{/if}}
+                <p>{{GetOrderStatus(obj.status)}}</p>
+                <a href="javascript:;" name="detail_btn">
+                    查看订单详情
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        {{/each}}
+    </script>
+
+    @*修改金额*@
+    <script type="text/html" id="form_template">
+        {{each data as obj i}}
+        <table class="table_s1">
+            <tr>
+                <th scope="row">订单金额：</th>
+                <td>
+                    <input type="text" maxlength="50" id="actual_amount" data-val="actual_amount" class="form-control form-control-sm" value="{{obj.amount}}" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">备注：</th>
+                <td>
+                    <textarea id="remarks" data-val="remarks" rows="3" cols="30" style="width:230px;"></textarea>
+                </td>
+            </tr>
+        </table>
+        {{/each}}
+    </script>
+
+</div>

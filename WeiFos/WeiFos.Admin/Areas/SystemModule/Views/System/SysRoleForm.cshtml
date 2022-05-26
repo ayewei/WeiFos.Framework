@@ -1,0 +1,120 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/city-area/area-1.0.js?@(AppGlobal.VNo)"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/System/SysRoleForm.js?@AppGlobal.VNo"></script>
+}
+
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)SystemModule/System/SysMenuManage">系统角色</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")系统角色</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <ul id="Tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#role_panel" data-toggle="tab">角色信息</a>
+            </li>
+            <li>
+                <a href="#assignedrole_panel" data-toggle="tab">分配权限</a>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+
+            <div id="role_panel" class="tab-pane active">
+                <table class="table_s1 wfull mt30 ">
+                    <tr>
+                        <th scope="row">角色名：</th>
+                        <td>
+                            <input type="text" id="name" data-val="name" maxlength="10" class="form-control form-control-sm" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">备注：</th>
+                        <td>
+                            <textarea style="width:500px;" data-val="remarks" id="remarks" cols="20" rows="3" class="form-control form-control-sm"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="pt8" scope="row">操作控制：</th>
+                        <td>
+                            <input type="checkbox" checked="checked" data-val="is_enable" id="is_enable" />
+                            <label>是否可用</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div id="assignedrole_panel" class="tab-pane">
+                <div class="tab-pane active" id="role_permissions">
+
+                    <div style="margin-bottom:10px;" class="card card-warning">
+                        <div class="card-header">
+                            <h3 class="card-title">选择权限</h3>
+                        </div>
+                    </div>
+
+
+                    @foreach (SysPermission module in ViewBag.permissions)
+                    {
+                        <div>
+                            <div class="right_f">
+                                <input type="checkbox" parentid="@module.parent_id" value='@module.id' />
+                                <span>@module.name</span>
+                            </div>
+                        </div>
+
+                        foreach (SysPermission function in ((List<SysPermission>)ViewBag.childrens).Where(p => p.parent_id == module.id))
+                        {
+                            <div>
+                                <div class="right_s">
+                                    <input type="checkbox" parentid="@function.parent_id" value='@function.id' />
+                                    <span>@function.name</span>
+                                </div>
+                            </div>
+
+                            <div style="display:flex;">
+                                @foreach (SysPermission action in ((List<SysPermission>)ViewBag.childrens).Where(p => p.parent_id == function.id))
+                                {
+                                    <div class="right_t disBlock">
+                                        <input type="checkbox" parentid="@action.parent_id" value="@action.id" />
+                                        <span>@action.name</span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-actions">
+        <input type="hidden" id="entity" value="@ViewBag.entity" />
+        <input type="hidden" id="permissionIds" value="@ViewBag.pids" />
+        <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+        <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+        <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+    </div>
+</div>
+

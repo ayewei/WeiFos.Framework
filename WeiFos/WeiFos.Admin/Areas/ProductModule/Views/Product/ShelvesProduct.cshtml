@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Product/ShelvesProduct.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body">
+                <div class="callout callout-warning">
+                    <p>上架新商品，商品上传入口页面，选择商品分类根节点，点击下一步，进入上传商品信息页面</p>
+                </div>
+                <div style="width:100%">
+                    <ul class="clearfix list_sc"></ul>
+                    <div class="m_laySelected mt10">
+                        你当前选择的是：<span id="select_text"></span>
+                    </div>
+
+                    <script id="template" type="text/html">
+                        {{each parents as obj i}}
+
+                        <li class="f_item" name="tp_li">
+                            <ul class="list_item" style="height:396px; overflow-y: auto;">
+                                {{each cgtys as cgty i}}
+                                {{if obj.parent_id == cgty.parent_id}}
+                                <li class="{{cgty.has_children == 1?"item_hs":"" }}" pid="{{cgty.parent_id}}" id="{{cgty.id}}"><a href="javascript:;">{{cgty.name}} </a></li>
+                                {{/if}}
+                                {{/each}}
+                            </ul>
+                        </li>
+
+                        {{/each}}
+                    </script>
+
+                    <script id="c_template" type="text/html">
+                        <li class="f_item" name="tp_li">
+                            <ul class="list_item" style="height:396px; overflow-y:auto; ">
+                                {{each data as c i}}
+                                <li class="{{c.has_children == 1?"item_hs":"" }}" pid="{{c.parent_id}}" id="{{c.id}}"><a href="javascript:;">{{c.name}} </a></li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                    </script>
+
+                    <div class="form-actions mt10 tac">
+                        <input type="button" value="下一步" class="btn btn-primary" id="next_Btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

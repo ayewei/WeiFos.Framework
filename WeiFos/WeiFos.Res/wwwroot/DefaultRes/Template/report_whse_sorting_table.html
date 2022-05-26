@@ -1,0 +1,39 @@
+﻿<table class="report" >		
+	<tr>
+        <th style="text-align:center;font-size:24px;" colspan="5">分&nbsp;&nbsp;&nbsp;拣&nbsp;&nbsp;&nbsp;单</th>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <span class="report-fr"style="font-size:20px">本单:<span style="text-decoration:underline;">&nbsp;&nbsp;{remarks}&nbsp;&nbsp;</span></span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <span class="report-fl" style="width:360px;">到货单号：<span style="font-size:18px">{aog_no}</span></span>
+            <span class="report-fl" style="width:400px;">供应商：<span style="font-size:18px">{cmp}</span></span>                
+        </td>
+    </tr>
+	<tr>
+        <td colspan="5">
+            <span class="report-fl" style="width:360px;">收货单号：<span style="font-size:18px">{serial_no}</span></span>
+            <span class="report-fl" style="width:400px;">收货人：<span style="font-size:18px">{oper}</span></span>               
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5"><table class="report-table" cellpadding="0" cellspacing="0" border="1" style="border:solid 1px black;border-collapse:collapse;margin:0;">
+                <tr>
+                    <th style="width:38px;text-align:left;">序号</th>
+                    <th style="width:180px;text-align:left;">商品编号</th>
+                    <th style="text-align:left;">商品名称</th>
+                    <th style="width:80px;text-align:left;">单价</th>
+                    <th style="width:60px;text-align:left;">数量</th>
+                </tr>{datarows}
+            </table>
+        </td>
+    </tr>       
+	<tr>
+        <td class="report-fl">分拣人：</td>
+        <td>分拣日期：</td>
+        <td colspan="3" ></td>
+    </tr>
+</table>

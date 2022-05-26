@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  weifos.admin:
+    image: ${DOCKER_REGISTRY}weifosadmin
+    build:
+      context: .
+      dockerfile: WeiFos\WeiFos.Admin\Dockerfile

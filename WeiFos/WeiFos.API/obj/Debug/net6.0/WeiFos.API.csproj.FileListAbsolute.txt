@@ -1,0 +1,7 @@
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.API\obj\Debug\net6.0\WeiFos.API.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.API\obj\Debug\net6.0\WeiFos.API.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.API\obj\Debug\net6.0\WeiFos.API.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.API\obj\Debug\net6.0\WeiFos.API.AssemblyInfo.cs
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.API\obj\Debug\net6.0\WeiFos.API.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.API\obj\Debug\net6.0\WeiFos.API.MvcApplicationPartsAssemblyInfo.cs
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.API\obj\Debug\net6.0\WeiFos.API.MvcApplicationPartsAssemblyInfo.cache

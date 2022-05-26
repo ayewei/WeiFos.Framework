@@ -1,0 +1,13 @@
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\bin\Release\netstandard2.0\WeiFos.CodeBuilder.deps.json
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\bin\Release\netstandard2.0\WeiFos.CodeBuilder.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\bin\Release\netstandard2.0\WeiFos.CodeBuilder.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\bin\Release\netstandard2.0\WeiFos.Core.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\bin\Release\netstandard2.0\WeiFos.ORM.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\bin\Release\netstandard2.0\WeiFos.ORM.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\bin\Release\netstandard2.0\WeiFos.Core.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\obj\Release\netstandard2.0\WeiFos.CodeBuilder.csprojAssemblyReference.cache
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\obj\Release\netstandard2.0\WeiFos.CodeBuilder.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\obj\Release\netstandard2.0\WeiFos.CodeBuilder.AssemblyInfo.cs
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\obj\Release\netstandard2.0\WeiFos.CodeBuilder.csproj.CopyComplete
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\obj\Release\netstandard2.0\WeiFos.CodeBuilder.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.CodeBuilder\obj\Release\netstandard2.0\WeiFos.CodeBuilder.pdb

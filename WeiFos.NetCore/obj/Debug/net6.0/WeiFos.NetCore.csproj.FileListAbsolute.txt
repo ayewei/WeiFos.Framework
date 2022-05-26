@@ -1,0 +1,15 @@
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Debug\net6.0\WeiFos.NetCore.deps.json
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Debug\net6.0\WeiFos.NetCore.dll
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Debug\net6.0\WeiFos.NetCore.pdb
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Debug\net6.0\WeiFos.Core.dll
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Debug\net6.0\WeiFos.Core.pdb
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.AssemblyInfo.cs
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.csproj.CopyComplete
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.dll
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\refint\WeiFos.NetCore.dll
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\WeiFos.NetCore.pdb
+\\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Debug\net6.0\ref\WeiFos.NetCore.dll

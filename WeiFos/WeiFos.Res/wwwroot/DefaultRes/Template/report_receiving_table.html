@@ -1,0 +1,48 @@
+﻿
+<table class="report" cellpadding="0" cellspacing="0">
+    <tr>
+        <th style="text-align:center;font-size:24px;line-height:40px;" colspan="5">收&nbsp;&nbsp;&nbsp;货&nbsp;&nbsp;&nbsp;验&nbsp;&nbsp;&nbsp;收&nbsp;&nbsp;&nbsp;单</th>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <span class="report-fl" style="width:330px;">发货店：{cmp_no}&nbsp;&nbsp;{cmp_name}</span>
+            <span class="report-fl" style="width:240px;">收货部门：{store_no}&nbsp;&nbsp;{store_name}</span>
+            <span class="report-fr" style="">收货单号：{serial_no}</span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <span class="report-fl" style="width:330px;">备注：{remarks}</span>
+            <span class="report-fl" style="width:240px;">发货日期：{aog_date}</span>
+            <span class="report-fr" style="">发货单号：{aog_no}</span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <table class="report-table" cellpadding="0" cellspacing="0" border="1" style="border:solid 1px black;border-collapse:collapse;margin-top:10px;">
+                <tr>
+                    <th style="width:38px;text-align:center;">序号</th>
+                    <th style="text-align:center;"><div>条码</div><div>商品名称</div></th>
+                    <th style="width:60px;text-align:center;"><div>定价</div><div>含光盘</div></th>
+                    <th style="width:120px;text-align:center;"><div>出版社</div><div>统计分类</div></th>
+                    <th style="width:100px;text-align:center;"><div>数量</div><div>进货折扣</div></th>
+                    <th style="width:80px;text-align:center;"><div>包装数</div><div>税率</div></th>
+                    <th style="width:120px;text-align:center;"><div>仓位</div><div>区域</div></th>
+                </tr>
+                {datarows}
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:190px;text-align:left;border-bottom:solid 1px black;">小计品种：{breed_num}</td>
+        <td style="width:160px;border-bottom:solid 1px black;">册数：{total_count}</td>
+        <td style="width:160px;border-bottom:solid 1px black;">码洋：{t_unit_price}</td>
+        <td style="width:160px;border-bottom:solid 1px black;">实洋：{cost_amount}</td>
+        <td style="width:205px;border-bottom:solid 1px black;">折扣额：{dis_amount}</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="width:160px;text-align:left;">备注：{remarks}</td>
+        <td style="width:160px;">操作员：{oper}</td>
+        <td style="width:205px;">日期：{year}-{month}-{day}</td>
+    </tr>
+</table>

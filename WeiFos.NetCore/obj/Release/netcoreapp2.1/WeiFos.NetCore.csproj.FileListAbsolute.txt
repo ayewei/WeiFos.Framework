@@ -1,0 +1,11 @@
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Release\netcoreapp2.1\WeiFos.NetCore.deps.json
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Release\netcoreapp2.1\WeiFos.NetCore.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Release\netcoreapp2.1\WeiFos.NetCore.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Release\netcoreapp2.1\WeiFos.Core.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\bin\Release\netcoreapp2.1\WeiFos.Core.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Release\netcoreapp2.1\WeiFos.NetCore.csprojAssemblyReference.cache
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Release\netcoreapp2.1\WeiFos.NetCore.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Release\netcoreapp2.1\WeiFos.NetCore.AssemblyInfo.cs
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Release\netcoreapp2.1\WeiFos.NetCore.csproj.CopyComplete
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Release\netcoreapp2.1\WeiFos.NetCore.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.NetCore\obj\Release\netcoreapp2.1\WeiFos.NetCore.pdb

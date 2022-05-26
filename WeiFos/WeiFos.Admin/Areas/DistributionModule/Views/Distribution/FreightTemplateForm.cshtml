@@ -1,0 +1,110 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Distribution/FreightTemplateForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)DistributionModule/Distribution/FreightTemplateManage">运费模板管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")运费模板</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <table class="table_s1 wfull mt30">
+            <tr>
+                <th scope="row">模板名称：</th>
+                <td>
+                    <input type="text" maxlength="50" id="name" data-val="name" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">首重重量：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="first_weight" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">续重重量：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="add_weight" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">默认首重价格：</th>
+                <td>
+                    <input type="text" maxlength="8" data-val="default_first_price" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">默认续重价格：</th>
+                <td>
+                    <input type="text" maxlength="8" data-val="default_add_price" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">地区价格：</th>
+                <td>
+
+                    <div class="m_opBar">
+                        <a href="javascript:;" id="add_region">
+                            <i class="fa fa-plus"></i>添加地区价格
+                        </a> 
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr role="row">
+                                <td class="align_left">到达地区</td>
+                                <td class="align_left" style="width:150px;">首重重量(克)</td>
+                                <td class="align_left" style="width:150px;">续重重量(克)</td>
+                                <td class="align_left" style="width:150px;">首重价格</td>
+                                <td class="align_left" style="width:150px;">续重价格</td>
+                                <td class="align_left"></td>
+                            </tr>
+                        </thead>
+                        <tbody id="regionBody" aria-relevant="all" aria-live="polite" role="alert">
+                            @if (ViewBag.FRegions != null)
+                            {
+                                foreach (var ftr in ViewBag.FRegions)
+                                {
+                                    <tr data-id="@ftr.id">
+                                        <td>@ftr.region_name  </td>
+                                        <td class="align_left" style="width:120px;"><input id="FirstWeight_@ViewBag.FRegions.IndexOf(ftr)" name="first_weight" value="@ftr.first_weight" class="input_wr" type="text" style="width:90px;"></td>
+                                        <td class="align_left" style="width:120px;"><input id="AddWeight_@ViewBag.FRegions.IndexOf(ftr)" name="add_weight" value="@ftr.add_weight" class="input_wr" type="text" style="width:90px;"> </td>
+                                        <td class="align_left" style="width:120px;"><input id="FirstPrice_@ViewBag.FRegions.IndexOf(ftr)" name="first_price" value="@ftr.first_price" class="input_wr" type="text" style="width:90px;"></td>
+                                        <td class="align_left" style="width:120px;"><input id="AddPrice_@ViewBag.FRegions.IndexOf(ftr)" name="add_price" value="@ftr.add_price" class="input_wr" type="text" style="width:90px;"> </td>
+                                        <td class="align_left" id="@ftr.id">
+                                            <a class="nl" name="update" href="javascript:;"><i class="fa fa-pencil-square-o"></i>修改地区</a>
+                                            <a class="nl" name="del" href="javascript:;"><i class="fa fa-trash-o"></i>删除</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-actions">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>

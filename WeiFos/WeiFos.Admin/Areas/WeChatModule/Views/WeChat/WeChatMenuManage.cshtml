@@ -1,0 +1,163 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Css{
+    <link href="@(AppGlobal.Res)css/Admin/opa-icons.css?@AppGlobal.VNo" rel="stylesheet" />
+    <link href="@(AppGlobal.Res)css/Admin/style-app.css?@AppGlobal.VNo" rel="stylesheet" />
+    <link href="@(AppGlobal.Res)css/Admin/vendor.css?@AppGlobal.VNo" rel="stylesheet" />
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/WeChat/WeChatMenuManage.js?@AppGlobal.VNo"></script>
+}
+
+
+<div class="ng-scope app-header-fixed app-aside-fixed">
+    <a href="" class="off-screen-toggle hide"></a>
+
+    <div class="app-content-body app-content-full fade-in-up">
+        <div class="hbox bg-light hot-all-style no-scroll">
+            <div class="col padder-l-xs main-content">
+                <section class="vbox ng-scope" ui-view="">
+                    <section class="vbox ng-scope" ui-view="">
+                        <div class="vbox wrapper-sm padder-l-xs ng-scope">
+
+                            <div class="r-3x box-shadow-2 bg-white vbox scroll-y ng-scope">
+                                <header class="text-md h-66 l-h-66 padder-sm">
+                                    <span class="font-bold">自定义菜单</span>
+                                </header>
+                                <section class="" style="top: 66px;right:10px;left:10px;width:auto;">
+                                    <div class="p-l-none h-full">
+                                        <div class="h-full pos-rlt p-b-10">
+                                            <div class="vbox bg-gray wrapper-sm r-3x">
+                                                <div class="vbox r-3x bg-white con-float">
+                                                    <div class="vbox pos-rlt">
+                                                        <div class="hbox">
+                                                            <aside class="w-md b-r">
+                                                                <div class="h-full">
+                                                                    <div class="vbox">
+                                                                        <header class="wrapper-sm">
+                                                                            <span class="dpn">
+                                                                                <span class="green v-a-m ui-switch green v-a-m switchery-small ng-pristine ng-valid checked">
+                                                                                    <small></small>
+                                                                                    <input type="checkbox" style="display:none" class="ng-pristine ng-valid" /><span class="switch-text"> </span>
+                                                                                </span>
+                                                                                <span class="v-a-m inline m-l-xs ng-binding">已启用</span>
+                                                                            </span>
+                                                                        </header>
+                                                                        <section class="pos-b-50 scroll-y">
+                                                                            <ul class="ul-unstyle list-block padder-md p-t-20 ng-scope">
+
+                                                                                <li class="wrapper-sm pos-rlt ng-scope" name="addmenu_btn">
+                                                                                    <div class="r-3x b b-dashed wrapper-md b-h-c pointer text-center">
+                                                                                        <div class="layout-center-tip">
+                                                                                            <div class="inline">
+                                                                                                <i class="fa fa-plus m-r-xs"></i>
+                                                                                            </div>
+                                                                                            <div class="inline">
+                                                                                                添加菜单
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+
+
+                                                                            </ul>
+                                                                        </section>
+                                                                        <footer class="wrapper-sm padder-md">
+                                                                            <button class="btn btn-sm thumb-btn-cus pull-right ng-binding dpn">规则排序</button>
+                                                                        </footer>
+                                                                    </div>
+                                                                </div>
+                                                            </aside>
+                                                            <aside class="">
+                                                                <div style="width:300px;height:450px;margin:10px auto;" class="pos-rlt">
+                                                                    <div class="custom-menu-view ng-isolate-scope" sort-disabled="true">
+                                                                        <div class="custom-menu-view__body b-t b-b" im-scroll-end="msgList">
+                                                                            <div class="weixin-msg-list vbox ng-isolate-scope" style="background:#e9e9e9;">
+                                                                                <header class="weixin-header">
+                                                                                    公众号
+                                                                                </header>
+                                                                                <section class="weixin-body">
+                                                                                    <ul class="msg-con"></ul>
+                                                                                </section>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="custom-menu-view__footer">
+                                                                            <div class="custom-menu-view__footer__left"></div>
+                                                                            <div class="custom-menu-view__footer__right ng-scope">
+                                                                                <div class="sort-placeholder custom-menu-view__menu pull-left sv-placeholder ng-hide" style="width: 100%;">
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </aside>
+                                                            <aside class="w-md b-l">
+                                                                <div class="h-full">
+                                                                    <div class="vbox">
+                                                                        <section class="scroll-y">
+                                                                            <div class="wrapper-sm">
+                                                                                <h5 class="font-bold m-d-md">菜单规则提示</h5>
+                                                                                <div class="l-h-2x text-muted">
+                                                                                    <span class="inline">1.最多创建3个一级菜单，一级菜单名称名字不多于4个汉字或8个字母。</span>
+                                                                                </div>
+                                                                                <div class="l-h-2x text-muted">
+                                                                                    <span class="inline">2.每个一级菜单下的子菜单最多可创建5个，子菜单名称名字不多于8个汉字或16个字母。</span>
+                                                                                </div>
+                                                                                <div class="l-h-2x text-muted">
+                                                                                    <span class="inline">3.在子菜单下可设置动作。</span>
+                                                                                </div>
+                                                                                <div class="l-h-2x text-muted">
+                                                                                    <span class="inline">4.若粉丝同时符合多个规则菜单，按规则菜单顺序由上至下匹配。</span>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </section>
+                                                                        <footer class="wrapper-sm padder-md">
+                                                                            @*<button class="btn btn-sm thumb-btn-cus pull-right dpn" name="enable_btn">启用</button>
+                                                                                <button class="btn btn-sm thumb-btn-cus pull-right dpn" name="dis_enable_btn">禁用</button>*@
+                                                                            <button class="btn btn-sm thumb-btn-cus pull-right dpn" name="edit_btn">修改</button>
+                                                                        </footer>
+                                                                    </div>
+                                                                </div>
+                                                            </aside>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-actions">
+    <input type="hidden" id="menus" value="@ViewBag.Menus" />
+    <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+    <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+    <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+</div>
+<script type="text/html" id="template">
+    {{each data as obj i}}
+    <li class="pos-rlt wrapper-sm ng-scope" data-id="{{obj.id}}" data-enable="{{obj.is_enable?1:0}}">
+        <div class="r-3x wrapper-sm p-b-none b con-float bg-white pointer">
+            <div class="text-ellipsis m-b-sm ng-binding">{{obj.name}}</div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+
+

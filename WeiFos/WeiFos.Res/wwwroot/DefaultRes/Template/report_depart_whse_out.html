@@ -1,0 +1,99 @@
+﻿<div id="print_report">
+    <div id="install_lodop"></div>
+    <table class="report" id="report">
+        <tr>
+            <th style="text-align:center;font-size:24px;" colspan="5"><!--番禺博览书店-->{depart}</th>
+        </tr>
+        <tr>
+            <th style="text-align:center;font-size:24px;" colspan="5">调&nbsp;&nbsp;&nbsp;拨&nbsp;&nbsp;&nbsp;单</th>
+        </tr>
+        <tr>
+            <td> <span class="report-fl" style="width:260px;">调拨单号：<span style="font-size:16px">{no}</span></span></td>
+            <td colspan="4">
+                <span class="report-fr" style="font-size:20px">本单:<span style="text-decoration:underline;">&nbsp;&nbsp;&nbsp;&nbsp;{items}&nbsp;&nbsp;&nbsp;&nbsp;</span>件</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+
+                <span class="report-fl" style="width:160px;">从：<span style="font-size:16px">{out_store}</span></span>
+                <span class="report-fl" style="width:160px;">到：<span style="font-size:16px">{in_store}</span></span>
+                <span class="report-fl" style="width:160px;">分拣类别：{catg_name}</span>
+                <span class="report-fl" style="width:120px;">操作员：{oper}</span>
+                <span class="report-fr">操作日期：{year}-{month}-{day}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <table class="report-table" cellpadding="0" cellspacing="0" border="1" style="border:solid 1px black;border-collapse:collapse;margin-top:10px;">
+                    <tr>
+                        <th style="width:38px;text-align:left;">序号</th>
+                        <th style="width:120px;text-align:left;">商品编号</th>
+                        <th style="text-align:left;">商品名称</th>
+                        <th style="width:60px;text-align:left;">单价</th>
+                        <th style="width:50px;text-align:left;">数量</th>
+                        <th style="width:80px;text-align:left;">统计分类</th>
+                        <th style="width:80px;text-align:left;">商品分类</th>
+                        <th style="width:80px;text-align:left;">出版社</th>
+                    </tr>
+                    {datarows}
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="report-fl" style="width:160px;">合计：</td>
+            <td style="width:160px;">品种：{breed_num}</td>
+            <td style="width:160px;">册数：{total_count}</td>
+            <td style="width:160px;">码洋：{t_unit_price}</td>
+            <td style="width:160px;">实洋：{cost_amount}</td>
+        </tr>
+        <tr>
+            <td colspan="5" class="report-fl">备注：{remarks}</td>
+
+        </tr>
+        <tr>
+            <td class="report-fl">打印：</td>
+            <td>捡货：</td>
+            <td colspan="3">改单：</td>
+        </tr>
+    </table>
+
+    <style>
+        #print_report {
+            width: 830px;
+        }
+
+        table.report, table.report-table {
+            width: 830px;
+            max-width: 830px;
+            font-size: 14px;
+        }
+
+            table.report table.report-table {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+                table.report table.report-table td {
+                    border: solid 1px black;
+                }
+
+        .border-r-l {
+            border-bottom: 2px solid #000000;
+            border-right: 2px solid #000000;
+        }
+
+        .report-fl {
+            display: inline-block;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .report-fr {
+            display: inline-block;
+            float: right;
+            margin-right: 5px;
+        }
+    </style>
+</div>

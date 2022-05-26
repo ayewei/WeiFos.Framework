@@ -1,0 +1,192 @@
+﻿@{
+    Layout = "";
+}
+@using WeiFos.Admin.Code;
+@using WeiFos.Entity.SystemModule;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>微狐BPM系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @await Html.PartialAsync("~/Views/Shared/_Script.cshtml")
+    <link href="@(AppGlobal.Res)js/plugins/pace-1.0.2/themes/blue/pace-theme-loading-bar.css" rel="stylesheet" />
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Home/index.js?@AppGlobal.VNo"></script>
+</head>
+
+<body class="hold-transition sidebar-mini" style="overflow:hidden;">
+    <div class="weifos-loadbg" id="weifos_loadbg"></div>
+    <div class="wrapper">
+        <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom" style="padding:0;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="javascript:;"><i class="fa fa-bars"></i></a>
+                </li>
+            </ul>
+            <div class="frame-tabs-wrap">
+                <ul class="navbar-nav">
+                    <li class="frame-tabItem active" tag-tab="-1">
+                        <span><i class="fa fa-desktop"></i>&nbsp;首页桌面</span>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown user user-menu">
+                    <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="@LoginUser.Instance.User.head_img" class="user-image" alt="User Image">
+                        <span class="hidden-xs">@LoginUser.Instance.User.login_name </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="user-header">
+                            <img src="@LoginUser.Instance.User.head_img" class="img-circle" alt="User Image">
+                            <p>
+                                @if (LoginUser.Instance.Employee != null)
+                                {
+                                    @Html.Raw(LoginUser.Instance.Employee.name)
+                                }
+                                else
+                                {
+                                    @Html.Raw("未设置昵称")
+                                }
+                                <small>本次登录时间 @LoginUser.Instance.User.login_time</small>
+                            </p>
+                        </li>
+
+                        <li class="user-body">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <a href="javascript:;">登录日志</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="javascript:;">操作日志</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="javascript:;">清空缓存</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="user-footer">
+                            <div class="pull-left" name="menu" data-id="100" data-src="/SystemModule/System/UpdateUserForm" title="个人信息">
+                                <button type="button" class="btn btn-block btn-default btn-flat">个人信息</button>
+                            </div>
+                            <div class="pull-right" id="login_out">
+                                <button type="button" class="btn btn-block btn-default btn-flat">退出登录</button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" href="javascript:;">
+                        <i class="fa fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        @*左侧菜单*@
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="index3.html" class="brand-link">
+                <img src="@(AppGlobal.Res)css/Admin/Images/WeiFosLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8;margin-left: .45rem;">
+                <span class="brand-text font-weight-light">WeiFos Framework</span>
+            </a>
+            <div class="sidebar">
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        @foreach (SysModelMenu p_m in ViewBag.p_menus)
+                        {
+                            if (LoginUser.Instance.VerifyPermission(p_m.serial_no))
+                            {
+                                <li class="nav-item has-treeview">
+                                    <a href="javascript:;" class="nav-link">
+                                        <i class="nav-icon fa @p_m.menu_class"></i>
+                                        <p>
+                                            @p_m.name
+                                            <i class="right fa fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview menu-open">
+                                        @foreach (SysModelMenu m in ViewBag.childrens)
+                                        {
+                                            if (m.parent_id == p_m.id && LoginUser.Instance.VerifyPermission(m.serial_no))
+                                            {
+                                                @*该菜单是否存在子菜单*@
+                                                if (AppGlobal.Instance.ExistChildrenMenus(m.id))
+                                                {
+                                                    <li class="nav-item has-treeview">
+                                                        <a href="javascript:;" class="nav-link">
+                                                            <i class="fa nav-icon @m.menu_class"></i>
+                                                            <p>
+                                                                @m.name
+                                                                <i class="fa fa-angle-left right"></i>
+                                                            </p>
+                                                        </a>
+                                                        <ul class="nav nav-treeview">
+                                                            @foreach (SysModelMenu cm in ViewBag.childrens)
+                                                            {
+                                                                if (cm.parent_id == m.id)
+                                                                {
+                                                                    <li class="nav-item" data-id="@cm.id" data-src="@cm.action_url">
+                                                                        <a href="javascript:;" class="nav-link">
+                                                                            <i class="fa nav-icon @cm.menu_class"></i>
+                                                                            <p>@cm.name</p>
+                                                                        </a>
+                                                                    </li>
+                                                                }
+                                                            }
+                                                        </ul>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li class="nav-item" data-id="@m.id" data-src="@m.action_url">
+                                                        <a href="javascript:;" class="nav-link">
+                                                            <i class="fa nav-icon @m.menu_class"></i>
+                                                            <p>@m.name</p>
+                                                        </a>
+                                                    </li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        }
+
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        @*右侧内容*@
+        <div class="content-wrapper">
+            <iframe class="frame-iframe active" tag-iframe="-1" frameborder="0" src="/Home/Default"></iframe>
+            <aside class="control-sidebar control-sidebar-dark"> </aside>
+        </div>
+    </div>
+
+    @*标签模板*@
+    <script type="text/html" id="tab_template">
+        <li class="frame-tabItem" tag-tab="{{id}}">
+            <span>
+                {{if icon_class !=null }}
+                <i class="{{icon_class}}"></i>
+                {{/if}}
+                &nbsp;{{name}}
+            </span>
+            <i class="nav-icon fa fa-close"></i>
+        </li>
+    </script>
+
+    @*iframe模板*@
+    <script type="text/html" id="iframe_template">
+        <iframe class="frame-iframe active" tag-iframe="{{id}}" frameborder="0" src="{{src}}"></iframe>
+    </script>
+
+</body>
+</html>
+
+

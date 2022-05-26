@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Distribution/DeliveryModeForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)DistributionModule/Distribution/DeliveryModeManage">配送方式管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")配送方式</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <table class="table_s1 wfull mt30">
+            <tr>
+                <th scope="row">配送方式名称：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="name" id="name" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">选择物流公司：</th>
+                <td>
+                    <ul class="dregion_ul">
+                        @foreach (var entity in ViewBag.LogisticsCompanys)
+                        {
+                            <li><input type="checkbox" value="@entity.id">@entity.name</li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">是否是默认：</th>
+                <td>
+                    <input type="checkbox" data-val="is_default"> 是
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">选择运费模板：</th>
+                <td>
+                    <select id="freight_template_id" data-val="freight_template_id">
+                        @foreach (var entity in ViewBag.FreightTemplates)
+                        {
+                            <option value="@entity.id">@entity.name</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">显示排序：</th>
+                <td>
+                    <input type="text" maxlength="50" id="order_index" data-val="order_index" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">备注信息：</th>
+                <td>
+                    <textarea id="remarks" style="width:400px;" data-val="remarks" cols="20" rows="2" name="remarks" lass="form-control form-control-sm w240"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-actions">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>

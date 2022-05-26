@@ -1,0 +1,132 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link href="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.css?@AppGlobal.VNo" rel="stylesheet" />
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/moment.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.min.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/upload/jquery.form.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/upload/jquery.uploadimg-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/city-area/area-1.0.js?@(AppGlobal.VNo)"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/System/UpdateUserForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item active">修改个人信息</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <table class="table_s1 wfull mt30 ">
+            <tr>
+                <th scope="row" style="width:120px;">图像设置：</th>
+                <td colspan="3">
+                    <div id="img_up"></div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:120px;">用户姓名：</th>
+                <td style="width:440px;">
+                    <input type="text" id="name" data-val="name" maxlength="30" class="form-control form-control-sm" />
+                </td>
+                <th scope="row">微信号码：</th>
+                <td colspan="3">
+                    <input type="text" id="wechat_no" maxlength="30" data-val="wechat_no" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">用户编号：</th>
+                <td>
+                    <input type="text" id="no" data-val="no" maxlength="30" class="form-control form-control-sm" />
+                </td>
+                <th scope="row"> 邮箱：</th>
+                <td>
+                    <input type="text" class="form-control form-control-sm" id="email" data-val="email" maxlength="30" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">手机号码：</th>
+                <td>
+                    <input type="text" id="mobile" data-val="mobile" maxlength="11" class="form-control form-control-sm" />
+                </td>
+                <th scope="row">用户性别：</th>
+                <td>
+                    <select id="sex" data-val="sex" class="form-control form-control-sm w178">
+                        <option value="true">男</option>
+                        <option value="false">女</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">账号状态：</th>
+                <td>
+                    <select id="status" data-val="status" class="form-control form-control-sm w178">
+                        <option value="1">正常</option>
+                        <option value="0">冻结</option>
+                    </select>
+                </td>
+                <th scope="row">QQ号码：</th>
+                <td>
+                    <input type="text" data-val="qq" maxlength="30" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">地区：</th>
+                <td>
+                    <div id="area_div"></div>
+                </td>
+                <th scope="row">出生年月：</th>
+                <td>
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="btn btn-default">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                        </div>
+                        <span>
+                            <input type="text" class="form-control form-control-sm w148" onfocus="$(this).blur()" data-val="birthday" id="birthday" />
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">详细地址：</th>
+                <td colspan="3">
+                    <input type="text" id="address" maxlength="200" data-val="address" style="width:307px;" class="form-control form-control-sm" />
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-actions">
+            <input type="hidden" id="defurl" value="@ViewBag.defurl" />
+            <input type="hidden" id="imgurl" value="@ViewBag.imgurl" />
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="hidden" id="Ticket" value="@ViewBag.Ticket" />
+            <input type="hidden" id="imgmsg" value="@ViewBag.imgmsg" />
+
+            <input type="hidden" id="employee" value="@ViewBag.employee" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>
+
+
+

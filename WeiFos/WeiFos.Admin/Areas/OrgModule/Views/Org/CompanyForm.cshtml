@@ -1,0 +1,146 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Css{
+    <link href="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.css?@ViewBag.VNo" rel="stylesheet" />
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/moment.js?@ViewBag.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.min.js?@ViewBag.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/city-area/area-1.0.js?@(ViewBag.VNo)"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/Org/CompanyForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)OrgModule/Org/SysMenuManage">公司管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")公司信息</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <table class="table_s1 mt30">
+            <tr>
+                <th scope="row" style="width:120px;">上级公司：</th>
+                <td style="width:440px;">
+                    <select name="parent_id" id="parent_id" data-val="parent_id" class="form-control form-control-sm w178">
+                        @foreach (Company m in ViewBag.Parents)
+                        {
+                            <option value="@m.id">@m.name</option>
+                        }
+                    </select>
+                </td>
+                <th scope="row">成立时间：</th>
+                <td>
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="btn btn-default">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                        </div>
+                        <span>
+                            <input type="text" class="form-control form-control-sm w148" onfocus="$(this).blur()" data-val="f_time" />
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">公司名称：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="name" class="form-control form-control-sm w240" />
+                </td>
+                <th scope="row">公司性质：</th>
+                <td>
+                    <select data-val="nature" class="form-control form-control-sm w178">
+                        <option value="-1">==请选择==</option>
+                        <option value="1">国家机关</option>
+                        <option value="2">房地产</option>
+                        <option value="3">建筑业</option>
+                        <option value="4">社会服务业</option>
+                        <option value="5">IT/互联网</option>
+                        <option value="6">制造业</option>
+                        <option value="7">金融业</option>
+                        <option value="8">其他业</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">英文名称：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="en_name" class="form-control form-control-sm w240" />
+                </td>
+                <th scope="row">中文简称：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="for_short" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">负责人：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="manager" class="form-control form-control-sm" />
+                </td>
+                <th scope="row">公司电话：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="tel" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">公司邮箱：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="email" class="form-control form-control-sm" />
+                </td>
+                <th scope="row">公司传真：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="fax" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">所在区域：</th>
+                <td>
+                    <div id="area_div"></div>
+                </td>
+                <th scope="row">详细地址：</th>
+                <td>
+                    <input type="text" maxlength="200" data-val="address" style="width:307px;" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">经验范围：</th>
+                <td colspan="4">
+                    <textarea data-val="biz_scope" rows="3" cols="30" class="form-control form-control-sm" style="width:500px;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">备注信息：</th>
+                <td colspan="4">
+                    <textarea data-val="remarks" rows="3" cols="30" class="form-control form-control-sm" style="width:500px;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">显示排序：</th>
+                <td>
+                    <input type="text" maxlength="50" id="order_index" data-val="order_index" class="form-control form-control-sm" />
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-actions">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+
+</div>

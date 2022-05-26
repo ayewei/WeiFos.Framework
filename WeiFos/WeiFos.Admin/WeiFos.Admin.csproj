@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\WeiFos.Cache\WeiFos.Cache.csproj" />
+    <ProjectReference Include="..\..\WeiFos.CodeBuilder\WeiFos.CodeBuilder.csproj" />
+    <ProjectReference Include="..\..\WeiFos.Entity\WeiFos.Entity.csproj" />
+    <ProjectReference Include="..\..\WeiFos.NetCore\WeiFos.NetCore.csproj" />
+    <ProjectReference Include="..\..\WeiFos.ORM\WeiFos.ORM.csproj" />
+    <ProjectReference Include="..\..\WeiFos.Service\WeiFos.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\SeoSettingModule\Views\SeoSetting\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.5" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,124 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>保存LBS回复</title> 
+    <link href="@(ViewBag.Res)Content/Resources/Style/bootstrap-cerulean.css" rel="stylesheet" />
+    <link href="@(ViewBag.Res)Content/Resources/Style/opa-icons.css" rel="stylesheet" />
+    <script src="@(ViewBag.Res)js/Config.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/bootstrap.min.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/plugins/validate/validates.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/plugins/yw-jq-plugin/upload/jquery.form.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)js/plugins/yw-jq-plugin/upload/jquery.uploadimg-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)Content/Ueditor/ueditor.config.js?@AppGlobal.VNo"></script>
+    <script src="@(ViewBag.Res)Content/Ueditor/ueditor.all.min.js?@AppGlobal.VNo"></script>
+    <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+    <script src="@(ViewBag.Res)js/WeChatStore/Reply/LBSReplyForm.js?@AppGlobal.VNo"></script>
+
+</head>
+<body>
+    <div class="box-title">
+        <h4>
+            <span class="icon32 icon-darkgray icon-compose" style="float: left;"></span>
+            LBS回复
+        </h4>
+    </div>
+    <div class="box">
+        <div class="box_title">
+            <ul id="Tabs" class="nav nav-tabs tab_title">
+                <li class="active">
+                    <a href="#base_panel" data-toggle="tab">基本信息</a>
+                </li>
+                <li>
+                    <a href="#details_panel" data-toggle="tab">图文详细</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="myTabContent" class="tab-content">
+
+            <div id="base_panel" class="tab-pane active">
+                <table class="table_s1">
+                    <tbody>
+                        <tr>
+                            <th scope="row" >名称：</th>
+                            <td>
+                                <input type="text" id="name" data-val="name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">电话：</th>
+                            <td>
+                                <input type="text" data-val="tel" id="tel" maxlength="15" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">封面图片：</th>
+                            <td>
+                                <div id="lbs_reply_img">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 150px;" scope="row">详细页显示封面图片：</th>
+                            <td>
+                                <input type="radio" name="showcover" data-val="showcover" value="true" checked="checked" id="1" />是
+                                <input type="radio" name="showcover" data-val="showcover" value="false" id="2" />否
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>是否启用：</th>
+                            <td>
+                                <input type="radio" name="is_enable" data-val="is_enable" value="true" checked="checked" id="3" />是
+                                <input type="radio" name="is_enable" data-val="is_enable" value="false" id="4" />否
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">封面简介：</th>
+                            <td>
+                                <textarea style="width:400px;" data-val="intro" id="intro" cols="20" rows="3" name="intro"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 150px;" scope="row">详细地址：</th>
+                            <td>
+                                <input type="text" style="width:400px;" data-val="address" id="address" name="address"><br/>
+                                不填则默认为地图地址
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">地图地址：</th>
+                            <td>
+                                <input type="text" data-val="lbsaddress" id="lbsaddress" name="address" style="width:400px;" />
+                                <input type="button" onclick="fun_geocoder_getPoint()" id="searchmap" value="搜 索" class="btn btn-small btn-primary btn-save" /><br />
+                                <div style="width: 520px; height: 340px; border: 1px solid #CCCCCC; margin-top: 10px;" id="container"></div>
+                                <input type="hidden" id="lat" value="@ViewBag.lat" />
+                                <input type="hidden" id="lng" value="@ViewBag.lng" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="details_panel" class="tab-pane">
+                <textarea id="content" data-val="content" rows="2" cols="20"></textarea>
+            </div>
+        </div>
+
+        <div class="form-actions mt10">
+            <input type="hidden" id="defimgurl" value="@ViewBag.imgurl" />
+            <input type="hidden" id="entity_json" value="@ViewBag.entity_json" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" />
+        </div>
+
+    </div>
+
+</body>
+</html>

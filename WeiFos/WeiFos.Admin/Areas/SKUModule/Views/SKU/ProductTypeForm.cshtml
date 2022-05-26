@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/SKU/ProductTypeForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)OrgModule/Org/SysMenuManage">商品类型管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")商品类型信息</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="callout callout-warning">
+        <p>商品类型是一系属性的组合，可以展示某些商品具有的特有的属性，一个商品类型下可添加多种属性.一种是供客户查看的扩展属性,一种是供客户可选的规格,如服装类型商品的颜色、尺码。</p>
+    </div>
+    <div class="m_step">
+        <ul class="clearfix pd0">
+            <li class="current"><p class="disBlock"><a href="javascript:;">第一步：保存类型名称</a> </p><i class="i_s_arrow disBlock"></i></li>
+            <li><p class="disBlock"><a href="@(ViewBag.entity == null ? "javascript:;" : "/SKUModule/SKU/AttrName?bid=" + ViewBag.bid)">第二步：保存基础属性</a></p><i class="i_s_arrow disBlock"></i></li>
+            <li><p class="disBlock"><a href="@(ViewBag.entity == null ? "javascript:;" : "/SKUModule/SKU/ExtAttrName?bid=" + ViewBag.bid)">第三步：保存扩展属性</a></p><i class="i_s_arrow disBlock"></i></li>
+            <li><p class="disBlock"><a href="@(ViewBag.entity == null ? "javascript:;" : "/SKUModule/SKU/SpecName?bid=" + ViewBag.bid)">第四步：保存规格</a></p></li>
+        </ul>
+    </div>
+    <div class="controls box">
+        <table class="table_s1 mt30">
+            <tr>
+                <th scope="row">类型名称：</th>
+                <td>
+                    <input type="text" maxlength="50" id="name" data-val="name" class="form-control form-control-sm w240" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">备注信息：</th>
+                <td>
+                    <textarea data-val="remarks" rows="3" cols="30" class="form-control form-control-sm" style="width:500px;"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-actions">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="下一步" id="SaveBtn" />
+        </div>
+    </div>
+
+</div>

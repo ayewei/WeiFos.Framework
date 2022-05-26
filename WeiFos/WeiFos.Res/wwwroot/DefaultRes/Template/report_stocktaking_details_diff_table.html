@@ -1,0 +1,33 @@
+﻿<table class="report" style="width:370px;font-family:"华文细黑";">
+    <tr>
+        <td colspan="3" style="text-align:center">
+            <table class="report-table" cellpadding="0" cellspacing="0" border="1" style="border:solid 1px black;border-collapse:collapse;width:370px">
+                <tr>
+                    <th style="height:30px;font-size:16px;text-align:center;">盘点差异单</th>
+                </tr>
+                <tr>
+                    <th style="font-size: 16px; text-align: left;">盘点单号：{serial_no}</th>
+                </tr>
+				<tr>
+                    <th style="font-size: 16px; text-align: left;">备注架号：{remarks}</th>
+                </tr>
+				<tr>
+                    <th style="font-size: 16px; text-align: left;">核查签名：</th>
+                </tr>
+            </table>
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="3">
+            <table class="report-table" cellpadding="0" cellspacing="0" border="1" style="font-size: 12px; border: solid 1px black; border-collapse: collapse; margin-top: 10px;">
+                <tr>
+                    <th style="width:24px;text-align:left;">序号</th>
+                    <th style="width:200px; text-align: left;">商品信息</th>
+                    <th style="width:28px;text-align:left;">定价</th>
+					{user_name}
+                </tr>
+                {datarows}
+            </table>
+        </td>
+    </tr>    
+</table>

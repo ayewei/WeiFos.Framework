@@ -1,0 +1,261 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link href="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.css?@AppGlobal.VNo" rel="stylesheet" />
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/moment.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/daterangepicker/daterangepicker.min.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/city-area/area-1.0.js?@(AppGlobal.VNo)"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/System/SysUserForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)SystemModule/System/SysUserManage">用户管理</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")系统用户</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <ul id="Tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#user" data-toggle="tab">用户信息</a>
+            </li>
+            <li>
+                <a href="#user_role" data-toggle="tab">分配角色</a>
+            </li>
+            <li>
+                <a href="#user_permission" data-toggle="tab">分配权限</a>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+            <div id="user" class="tab-pane active">
+                <table class="table_s1 wfull ">
+                    <thead>
+                        <tr>
+                            <td colspan="4">
+                                <label class="control-label" for="inputWarning"><i class="fa fa-bars"></i> 账号信息</label>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th scope="row" style="width:120px;">登录名：</th>
+                        <td style="width:440px;">
+                            @if (ViewBag.entity == null)
+                            {
+                                <input type="text" class="form-control form-control-sm" id="login_name" data-val="login_name" maxlength="30" />
+                            }
+                            else
+                            {
+                                <label data-val="login_name" style="color:#dd5600;font-weight:bold; font-size:14px;"></label>
+                            }
+                        </td>
+                        <th scope="row">账号状态：</th>
+                        <td>
+                            <select id="status" data-val="status" class="form-control form-control-sm w178">
+                                <option value="1">正常</option>
+                                <option value="0">冻结</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">是否是管理员：</th>
+                        <td>
+                            <input id="is_shelves" data-val="is_shelves" type="checkbox" checked="checked">
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table_s1 wfull ">
+                    <thead>
+                        <tr>
+                            <td colspan="4">
+                                <label class="control-label" for="inputWarning"><i class="fa fa-bars"></i> 员工信息</label>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th scope="row" style="width:120px;">员工姓名：</th>
+                        <td style="width:440px;">
+                            <input type="text" data-val-e="name" class="form-control form-control-sm" maxlength="30" />
+                        </td>
+                        <th scope="row">微信号码：</th>
+                        <td>
+                            <input type="text" class="form-control form-control-sm" id="wechat_no" data-val-e="wechat_no" maxlength="30" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">员工编号：</th>
+                        <td>
+                            <input type="text" class="form-control form-control-sm" id="no" data-val-e="no" maxlength="30" />
+                        </td>
+                        <th scope="row"> 邮箱：</th>
+                        <td>
+                            <input type="text" class="form-control form-control-sm" id="email" data-val-e="email" maxlength="30" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">手机号码：</th>
+                        <td>
+                            <input type="text" class="form-control form-control-sm" id="mobile" data-val-e="mobile" maxlength="30" />
+                        </td>
+                        <th scope="row">员工性别：</th>
+                        <td>
+                            <select id="sex" data-val-e="sex" class="form-control form-control-sm w178">
+                                <option value="true">男</option>
+                                <option value="false">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">QQ号码：</th>
+                        <td>
+                            <input type="text" class="form-control form-control-sm" id="qq" data-val-e="qq" maxlength="30" />
+                        </td>
+                        <th scope="row">出生年月：</th>
+                        <td>
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="btn btn-default">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                                <span>
+                                    <input type="text" class="form-control form-control-sm w148" onfocus="$(this).blur()" data-val-e="birthday" id="birthday" />
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">地区：</th>
+                        <td>
+                            <div id="area_div"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">详细地址：</th>
+                        <td>
+                            <input type="text" id="address" maxlength="200" data-val-e="address" style="width:307px;" class="form-control form-control-sm" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="user_role" class="tab-pane">
+                <table class="text-center" cellspacing="0" style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td style="width: 200px">
+                                已有角色
+                            </td>
+                            <td style="width: 20px">
+                                分配
+                            </td>
+                            <td style="width: 200px">
+                                待分配角色
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <select name="HaveRole" multiple="multiple" style="width: 98%; height: 180px;" class="form-control">
+                                    @foreach (SysRole r in ViewBag.hasRoles)
+                                    {
+                                        <option value="@r.id">
+                                            @r.name
+                                        </option>
+                                    }
+                                </select>
+                            </td>
+                            <td align="center">
+                                <div class="btn-group-vertical">
+                                    <button type="button" class="btn btn-default" name="MoveAllToRight"><i class="fa fa-fw fa-angle-double-right"></i></button>
+                                    <button type="button" class="btn btn-default" name="MoveToRight"><i class="fa fa-fw fa-angle-right"></i></button>
+                                    <button type="button" class="btn btn-default" name="MoveToLeft"><i class="fa fa-fw fa-angle-left"></i></button>
+                                    <button type="button" class="btn btn-default" name="MoveAllToLeft"><i class="fa fa-fw fa-angle-double-left"></i></button>
+                                </div>
+                            </td>
+                            <td valign="top">
+                                <select name="OtherRole" multiple="multiple" style="width: 98%; height: 180px;" class="form-control">
+                                    @foreach (SysRole r in ViewBag.tobeRoles)
+                                    {
+                                        <option value="@r.id">
+                                            @r.name
+                                        </option>
+                                    }
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="user_permission" class="tab-pane">
+                <div style="margin-bottom:10px;" class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">选择权限</h3>
+                    </div>
+
+                    @foreach (SysPermission module in ViewBag.permissions)
+                    {
+                        <div>
+                            <div class="right_f">
+                                <input type="checkbox" parentid="@module.parent_id" value='@module.id' />
+                                <span>@module.name</span>
+                            </div>
+                        </div>
+
+                        foreach (SysPermission function in ((List<SysPermission>)ViewBag.pchildrens).Where(p => p.parent_id == module.id))
+                        {
+                            <div>
+                                <div class="right_s">
+                                    <input type="checkbox" parentid="@function.parent_id" value='@function.id' />
+                                    <span>@function.name</span>
+                                </div>
+                            </div>
+
+                            <div style="display:flex;">
+                                @foreach (SysPermission action in ((List<SysPermission>)ViewBag.pchildrens).Where(p => p.parent_id == function.id))
+                                {
+                                    <div class="right_t disBlock">
+                                        <input type="checkbox" parentid="@action.parent_id" value="@action.id" />
+                                        <span>@action.name</span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <input type="hidden" id="defurl" value="@ViewBag.defurl" />
+            <input type="hidden" id="imgurl" value="@ViewBag.imgurl" />
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="hidden" id="Ticket" value="@ViewBag.Ticket" />
+            <input type="hidden" id="imgmsg" value="@ViewBag.imgmsg" />
+
+            <input type="hidden" id="pids" value="@ViewBag.pids" />
+            <input type="hidden" id="employee" value="@ViewBag.employee" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>
+
+
+

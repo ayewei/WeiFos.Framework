@@ -1,0 +1,11 @@
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\bin\Release\netstandard2.0\WeiFos.Cache.deps.json
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\bin\Release\netstandard2.0\WeiFos.Cache.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\bin\Release\netstandard2.0\WeiFos.Cache.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\bin\Release\netstandard2.0\WeiFos.Core.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\bin\Release\netstandard2.0\WeiFos.Core.pdb
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\obj\Release\netstandard2.0\WeiFos.Cache.csprojAssemblyReference.cache
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\obj\Release\netstandard2.0\WeiFos.Cache.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\obj\Release\netstandard2.0\WeiFos.Cache.AssemblyInfo.cs
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\obj\Release\netstandard2.0\WeiFos.Cache.csproj.CopyComplete
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\obj\Release\netstandard2.0\WeiFos.Cache.dll
+\\Mac\Home\Documents\xxxXXXXXXxxx\PModule00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos.Cache\obj\Release\netstandard2.0\WeiFos.Cache.pdb

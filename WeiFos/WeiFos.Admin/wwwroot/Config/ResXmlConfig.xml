@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<WebResConfig>
+
+  <!--缺省图片路径配置-->
+  <Images>
+
+    <!--系统用户图缺省src-->
+    <Image Name="SysUser" Path="/DefaultRes/Images/system_user.png" />
+ 
+    <!--商品类别图缺省src-->
+    <Image Name="GuideProduct_Cgty" Path="/DefaultRes/Images/Default.jpg" />
+
+    <!--微信公众号图缺省src-->
+    <Image Name="WX_Account" Path="/DefaultRes/Images/System_User.png" />
+
+    <!--平台商品牌图缺省src-->
+    <Image Name="Product_Brand" Path="/DefaultRes/Images/nopic_t.jpg" />
+ 
+    <!--案例封面图缺省src-->
+    <Image Name="Case_Cover" Path="/DefaultRes/Images/nopic_b.jpg" />
+
+    <!--文章封面src-->
+    <Image Name="Informt" Path="/DefaultRes/Images/nopic_t.jpg" />
+
+    <!--合作伙伴 封面src-->
+    <Image Name="Partner" Path="/DefaultRes/Images/nopic_t.jpg" />
+
+    <!--成功案例 封面src-->
+    <Image Name="Case_Cover" Path="/DefaultRes/Images/nopic_t.jpg" />
+
+    <!--图文回复封面src-->
+    <Image Name="ImgTextReply_Title" Path="/DefaultRes/Images/nopic_t.jpg" />
+
+    <!--LBS回复封面src-->
+    <Image Name="LbsReply_Title" Path="/DefaultRes/Images/nopic_t.jpg" />
+
+    <!--微信分享显示图-->
+    <Image Name="Share_Title" Path="/DefaultRes/Images/nopic_t.jpg" />
+    
+    <!--商城前端广告图-->
+    <Image Name="Partner" Path="/DefaultRes/Images/nopic_t.jpg" />
+
+    <!--商品导购分类-->
+    <Image Name="Banner" Path="/DefaultRes/Images/nopicture.jpg" />
+    
+  </Images>
+
+
+</WebResConfig>
+
+
+

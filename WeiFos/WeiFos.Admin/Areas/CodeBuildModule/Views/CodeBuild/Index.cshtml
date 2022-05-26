@@ -1,0 +1,118 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link href="@(AppGlobal.Res)js/plugins/bootstrap-treeview/bootstrap-treeview.css?@AppGlobal.VNo" rel="stylesheet" />
+    <style type="text/css">
+        .list-group-item { border: none }
+        .list-group-item:first-child { border-top-left-radius: 0rem; border-top-right-radius: 0rem; border-top: 0px; }
+    </style>
+}
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/template/template-web.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/template/template.helper.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/datagrid/datagrid-1.0.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/bootstrap-treeview/bootstrap-treeview.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/CodeBuild/Index.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body">
+                <div class="dataTables_wrapper container-fluid dt-bootstrap4">
+                    <div class="row">
+                        <div class="col-md-20">
+                            <div class="card card-info card-outline">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        服务器列表
+                                    </h3>
+                                </div>
+                                <div class="card-body p-0" style="display: block;">
+                                    <div id="treeview" style="overflow-y:hidden;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-80 ml-sub8">
+                            <div style="display:flex;">
+                                <div class="col-md-6" style="margin-left:0px;margin-left:-8px;">
+                                    <div class="dataTables_length">
+                                        <div class="input-group input-group-sm">
+                                            <select id="modules" class="form-control form-control-sm">
+                                                <option value="-1">——配置模块——</option> 
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pdr-18 ml-15">
+                                    <div class="dataTables_filter">
+                                        <div class="btn-group btn-group-sm">
+                                            <div class="btn-group btn-group-sm" style="display: inline-block;">
+                                                <div class="btn-group btn-group-sm">
+                                                    <a name="refresh_btn" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                                                </div>
+                                                <a name="preview_btn" class="btn btn-default"><i class="fa fa-file-text-o"></i>&nbsp;代码预览</a>
+                                                <a name="generate_btn" class="btn btn-default"><i class="fa fa-skyatlas"></i>&nbsp;代码生成</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div name="datagrid" class="mt5"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/html" id="template">
+    {{each data.tableInfo as obj i}}
+    <tr data-id="{{obj.table_id}}">
+        <td>
+            {{obj.order_index}}
+        </td>
+        <td>
+            {{obj.name}}
+        </td>
+        <td>
+            {{obj.typename}}
+        </td>
+        <td>
+            {{obj.length}}
+        </td>
+        <td>
+            {{if obj.is_primary == 1}}
+            <i class="fa fa-toggle-on"></i>
+            {{else}}
+            <i class="fa fa-toggle-off"></i>
+            {{/if}}
+        </td>
+        <td>
+            {{if obj.is_identity == 1}}
+            <i class="fa fa-toggle-on"></i>
+            {{else}}
+            <i class="fa fa-toggle-off"></i>
+            {{/if}}
+        </td>
+        <td>
+            {{if obj.is_nullable }}
+            <i class="fa fa-toggle-on"></i>
+            {{else}}
+            <i class="fa fa-toggle-off"></i>
+            {{/if}}
+        </td>
+        <td>
+            {{obj.remark}}
+        </td>
+    </tr>
+    {{/each}}
+</script>
+
+

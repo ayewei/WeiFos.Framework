@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Js{
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/yw.config.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/plugins/yw-jq-plugin/validate/validates-2.1.3.js?@AppGlobal.VNo"></script>
+    <script src="@(AppGlobal.Res)js/Admin/Areas/CodeBuild/ServerLinkForm.js?@AppGlobal.VNo"></script>
+}
+
+<div class="content pd5">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@AppGlobal.Admin">首页</a></li>
+                        <li class="breadcrumb-item"><a href="@(AppGlobal.Admin)CodeBuildModule/CodeBuild/ServerLinkManage">数据库链接</a></li>
+                        <li class="breadcrumb-item active">@(ViewBag.entity == null ? "添加" : "修改")数据库链接</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="controls box">
+        <table class="table_s1 mt30">
+            <tr>
+                <th scope="row">数据库类型：</th>
+                <td>
+                    <select data-val="db_type" class="form-control form-control-sm w178">
+                        @foreach (var m in DBType.DBList)
+                        {
+                            <option value="@m.Key">@m.Value</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">链接名称：</th>
+                <td>
+                    <input type="text" maxlength="50" data-val="name" class="form-control form-control-sm" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">连接串：</th>
+                <td>
+                    <input type="text" maxlength="300" data-val="connection_str" class="form-control form-control-sm" style="width:500px;" />
+                </td>
+            </tr> 
+        </table>
+
+        <div class="form-actions">
+            <input type="hidden" id="entity" value="@ViewBag.entity" />
+            <input type="button" class="btn btn-info" value="重新加载" onclick="javascript: window.location.reload();" />
+            <input type="button" class="btn btn-cancel" value="返 回" id="BackBtn" onclick="javascript: history.go(-1);" />
+            <input type="button" class="btn btn-small btn-primary btn-save" value="保 存" id="SaveBtn" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+﻿<div id="print_report">
+    <div id="install_lodop"></div>
+    <table class="report" id="report">
+        <tr>
+            <td colspan="3">
+                <span class="report-fl">单号：{no}</span>
+                <span class="report-fr">{year}年{month}月{day}日 {hour}:{min}:{sec}</span>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align:center;" colspan="3">厦门博览书店管理有限公司-采购单收货</th>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align:center">
+                <table class="report-table" cellpadding="0" cellspacing="0" border="1" style="border:solid 1px black;border-collapse:collapse;width:980px">
+                    <tr>
+                        <th style="width:80px;text-align:left;">采购单号：</th>
+                        <td style="width:260px;text-align:left;">{no}</td>
+                        <th style="width:80px;text-align:left;">录 单 员：</th>
+                        <td style="width:120px;text-align:left;">{user_name}</td>
+                        <th style="width:80px;text-align:left;">录单时间：</th>
+                        <td style="width:110px;text-align:left;">{created_date}</td>
+                        <th style="width:100px;text-align:left;">总 数 量：</th>
+                        <td style="text-align:left;">{total_count}</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align:left;">品 种 数：</th>
+                        <td style="text-align:left;">{breed_num}</td>
+                        <th style="text-align:left;">总 码 洋：</th>
+                        <td style="text-align:left;">{t_unit_price}</td>
+                        <th style="text-align:left;">总 成 本：</th>
+                        <td style="text-align:left;">{total_cost_amount}</td>
+                        <th style="text-align:left;">送货截止日期：</th>
+                        <td style="text-align:left;">{expiration_date}</td>
+
+                    </tr>
+                    <tr>
+                        <th style="text-align:left;">供 应 商：</th>
+                        <td style="text-align:left;">{sup_name}</td>
+                        <th style="text-align:left;">结算方式：</th>
+                        <td style="text-align:left;">{settlement_modes}</td>
+                        <th style="text-align:left;">进项税率：</th>
+                        <td style="text-align:left;">{tax_rates}</td>
+                        <th style="text-align:left;">联 系 人：</th>
+                        <td style="text-align:left;">{contacts}</td>
+
+                    </tr>
+                    <tr>
+                        <th style="text-align:left;">联系电话：</th>
+                        <td style="text-align:left;">{mobile}</td>
+                        <th style="text-align:left;">公司电话：</th>
+                        <td style="text-align:left;">{telphone}</td>
+                        <th style="text-align:left;">公司传真：</th>
+                        <td colspan="3" style="text-align:left;">{fax}</td>
+
+                    </tr>
+                    <tr>
+                        <th style="text-align:left;">备注：</th>
+                        <td colspan="8" style="text-align:left;">{remarks}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table class="report-table" cellpadding="0" cellspacing="0" border="1" style="border:solid 1px black;border-collapse:collapse;margin-top:10px;">
+                    <tr>
+                        <th style="width:38px;text-align:left;">序号</th>
+                        <th style="text-align:left;">商品信息</th>
+                        <th style="width:80px;text-align:left;">定价</th>
+                        <th style="width:80px;text-align:left;">进价</th>
+                        <th style="width:100px;text-align:left;">订数/已收</th>
+                        <th style="width:100px;text-align:left;">到货数量</th>
+                        <th style="width:60px;text-align:left;">单位</th>
+                        <th style="width:140px;text-align:left;">含税成本</th>
+                        <th style="width:90px;text-align:left;">税率</th>
+                        <th style="width:90px;text-align:left;">税额</th>
+                        <th style="width:90px;text-align:left;">不含税成本</th>
+                        <th style="width:90px;text-align:left;">折扣率</th>
+                    </tr>
+                    {datarows}
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="report-fl">录单员：{created_user}</td>
+            <td>审核员：{updated_user}</td>
+            <td>收货员：</td>
+
+        </tr>
+        <tr>
+            <td class="report-fl">时间：{created_date}</td>
+            <td>时间：{updated_date}</td>
+            <td>时间：</td>
+        </tr>
+    </table>
+    <style>
+        #print_report {
+            width: 1202px;
+        }
+
+        table.report {
+            margin: 10px 10px auto 10px;
+        }
+
+        table.report, table.report-table {
+            width: 1182px;
+            max-width: 1182px;
+            font-size: 14px;
+        }
+
+            table.report table.report-table {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+                table.report table.report-table td { /*border-left:2px solid #000000;border-top:2px solid #000000;*/
+                    border: solid 1px black
+                }
+        /*table.report table.report-table td:nth-child(9n){border-right:2px solid #000000;border-top:2px solid #000000;}*/
+        .border-r-l {
+            border-bottom: 2px solid #000000;
+            border-right: 2px solid #000000;
+        }
+
+        .report-fl {
+            display: inline-block;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .report-fr {
+            display: inline-block;
+            float: right;
+            margin-right: 5px;
+        }
+    </style>
+</div>

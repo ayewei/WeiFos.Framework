@@ -1,0 +1,376 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WeiFos.Admin
+build_property.RootNamespace = WeiFos.Admin
+build_property.ProjectDir = \\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.Admin\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = \\Mac\Home\Documents\devt\xxx00\weifos.project\WeiFos.NetCore\WeiFos.Framework\WeiFos\WeiFos.Admin
+build_property._RazorSourceGeneratorDebug = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/CodeBuildModule/Views/CodeBuild/CodePreview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29kZUJ1aWxkTW9kdWxlXFZpZXdzXENvZGVCdWlsZFxDb2RlUHJldmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/CodeBuildModule/Views/CodeBuild/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29kZUJ1aWxkTW9kdWxlXFZpZXdzXENvZGVCdWlsZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/CodeBuildModule/Views/CodeBuild/ProjectSettingForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29kZUJ1aWxkTW9kdWxlXFZpZXdzXENvZGVCdWlsZFxQcm9qZWN0U2V0dGluZ0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/CodeBuildModule/Views/CodeBuild/ProjectSettingManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29kZUJ1aWxkTW9kdWxlXFZpZXdzXENvZGVCdWlsZFxQcm9qZWN0U2V0dGluZ01hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/CodeBuildModule/Views/CodeBuild/ServerLinkForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29kZUJ1aWxkTW9kdWxlXFZpZXdzXENvZGVCdWlsZFxTZXJ2ZXJMaW5rRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/CodeBuildModule/Views/CodeBuild/ServerLinkManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29kZUJ1aWxkTW9kdWxlXFZpZXdzXENvZGVCdWlsZFxTZXJ2ZXJMaW5rTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/CodeBuildModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29kZUJ1aWxkTW9kdWxlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/DistributionModule/Views/Distribution/DeliveryModeForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlzdHJpYnV0aW9uTW9kdWxlXFZpZXdzXERpc3RyaWJ1dGlvblxEZWxpdmVyeU1vZGVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/DistributionModule/Views/Distribution/DeliveryModeManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlzdHJpYnV0aW9uTW9kdWxlXFZpZXdzXERpc3RyaWJ1dGlvblxEZWxpdmVyeU1vZGVNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/DistributionModule/Views/Distribution/FreightTemplateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlzdHJpYnV0aW9uTW9kdWxlXFZpZXdzXERpc3RyaWJ1dGlvblxGcmVpZ2h0VGVtcGxhdGVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/DistributionModule/Views/Distribution/FreightTemplateManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlzdHJpYnV0aW9uTW9kdWxlXFZpZXdzXERpc3RyaWJ1dGlvblxGcmVpZ2h0VGVtcGxhdGVNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/DistributionModule/Views/Distribution/LogisticsCompanyForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlzdHJpYnV0aW9uTW9kdWxlXFZpZXdzXERpc3RyaWJ1dGlvblxMb2dpc3RpY3NDb21wYW55Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/DistributionModule/Views/Distribution/LogisticsCompanyManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlzdHJpYnV0aW9uTW9kdWxlXFZpZXdzXERpc3RyaWJ1dGlvblxMb2dpc3RpY3NDb21wYW55TWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/DistributionModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGlzdHJpYnV0aW9uTW9kdWxlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrderModule/Views/Order/OrderRefundForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJNb2R1bGVcVmlld3NcT3JkZXJcT3JkZXJSZWZ1bmRGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrderModule/Views/Order/OrderRefundManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJNb2R1bGVcVmlld3NcT3JkZXJcT3JkZXJSZWZ1bmRNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrderModule/Views/Order/ProductOrderForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJNb2R1bGVcVmlld3NcT3JkZXJcUHJvZHVjdE9yZGVyRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrderModule/Views/Order/ProductOrderManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJNb2R1bGVcVmlld3NcT3JkZXJcUHJvZHVjdE9yZGVyTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrderModule/Views/Order/ProductOrderReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJNb2R1bGVcVmlld3NcT3JkZXJcUHJvZHVjdE9yZGVyUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrderModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJNb2R1bGVcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/CompanyForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xDb21wYW55Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/CompanyManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xDb21wYW55TWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/DepartmentForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xEZXBhcnRtZW50Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/DepartmentManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xEZXBhcnRtZW50TWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/EmployeeForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xFbXBsb3llZUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/EmployeeManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xFbXBsb3llZU1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/PostForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xQb3N0Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/Org/PostManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXE9yZ1xQb3N0TWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/OrgModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnTW9kdWxlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/BrandForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XEJyYW5kRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/BrandManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XEJyYW5kTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/CategoryForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XENhdGVnb3J5Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/CategoryManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XENhdGVnb3J5TWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/GuidePdtCatgForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XEd1aWRlUGR0Q2F0Z0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/GuidePdtCatgManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XEd1aWRlUGR0Q2F0Z01hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/ProductForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XFByb2R1Y3RGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/ProductManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XFByb2R1Y3RNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/ProductRecycle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XFByb2R1Y3RSZWN5Y2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/SchedulShelveManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XFNjaGVkdWxTaGVsdmVNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/Views/Product/ShelvesProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxWaWV3c1xQcm9kdWN0XFNoZWx2ZXNQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/ProductModule/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1vZHVsZVxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SeoSettingModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VvU2V0dGluZ01vZHVsZVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SiteSettingModule/Views/SiteSetting/BannerForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2l0ZVNldHRpbmdNb2R1bGVcVmlld3NcU2l0ZVNldHRpbmdcQmFubmVyRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SiteSettingModule/Views/SiteSetting/BannerManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2l0ZVNldHRpbmdNb2R1bGVcVmlld3NcU2l0ZVNldHRpbmdcQmFubmVyTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SiteSettingModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2l0ZVNldHRpbmdNb2R1bGVcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SKUModule/Views/SKU/AttrName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU0tVTW9kdWxlXFZpZXdzXFNLVVxBdHRyTmFtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SKUModule/Views/SKU/ExtAttrName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU0tVTW9kdWxlXFZpZXdzXFNLVVxFeHRBdHRyTmFtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SKUModule/Views/SKU/ProductTypeForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU0tVTW9kdWxlXFZpZXdzXFNLVVxQcm9kdWN0VHlwZUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SKUModule/Views/SKU/ProductTypeManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU0tVTW9kdWxlXFZpZXdzXFNLVVxQcm9kdWN0VHlwZU1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SKUModule/Views/SKU/SpecName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU0tVTW9kdWxlXFZpZXdzXFNLVVxTcGVjTmFtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SKUModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU0tVTW9kdWxlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/ConfigParamForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxDb25maWdQYXJhbUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/ConfigParamManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxDb25maWdQYXJhbU1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/IconsManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxJY29uc01hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/LogInterfaceManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxMb2dJbnRlcmZhY2VNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/LogLoginManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxMb2dMb2dpbk1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/LogSystemManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxMb2dTeXN0ZW1NYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysMenuForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNNZW51Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysMenuManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNNZW51TWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysPermissionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNQZXJtaXNzaW9uRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysPermissionManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNQZXJtaXNzaW9uTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysRoleForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNSb2xlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysRoleManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNSb2xlTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysUserForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNVc2VyRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/SysUserManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxTeXNVc2VyTWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/System/UpdateUserForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXFN5c3RlbVxVcGRhdGVVc2VyRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/SystemModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtTW9kdWxlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/AccountSetting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxBY2NvdW50U2V0dGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/DefaultReply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxEZWZhdWx0UmVwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/ImgTextReplyForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxJbWdUZXh0UmVwbHlGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/ImgTextReplyManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxJbWdUZXh0UmVwbHlNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/LBSReplyForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxMQlNSZXBseUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/LBSReplyManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxMQlNSZXBseU1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/TextReplyForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxUZXh0UmVwbHlGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/TextReplyManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxUZXh0UmVwbHlNYW5hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/WeChatMenuForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxXZUNoYXRNZW51Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/WeChat/WeChatMenuManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXFdlQ2hhdFxXZUNoYXRNZW51TWFuYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Areas/WeChatModule/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcV2VDaGF0TW9kdWxlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Home/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Home/NoPermission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb1Blcm1pc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/PassPort/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc1BvcnRcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/Shared/_Script.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TY3JpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[//Mac/Home/Documents/devt/xxx00/weifos.project/WeiFos.NetCore/WeiFos.Framework/WeiFos/WeiFos.Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
