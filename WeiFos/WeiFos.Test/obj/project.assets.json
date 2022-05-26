@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Test\\WeiFos.Test.csproj",
+      "projectUniqueName": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos\\WeiFos.Test\\WeiFos.Test.csproj",
       "projectName": "WeiFos.Test",
-      "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Test\\WeiFos.Test.csproj",
+      "projectPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos\\WeiFos.Test\\WeiFos.Test.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos.Test\\obj\\",
+      "outputPath": "\\\\Mac\\Home\\Documents\\devt\\xxx00\\weifos.project\\WeiFos.NetCore\\WeiFos.Framework\\WeiFos\\WeiFos.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
